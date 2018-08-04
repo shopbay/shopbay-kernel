@@ -1,0 +1,1 @@
+<?php $this->renderSearchItemView($data);

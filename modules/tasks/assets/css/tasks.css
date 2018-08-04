@@ -1,0 +1,135 @@
+.main-view .heading .tip {
+    position:absolute;
+    top:-20px;
+    right:0px;
+    font-size: 0.4em;
+}
+.main-view .heading .subscript .tag {
+    margin: 5px;
+}
+
+.main-view .menuitem 
+{
+    background:whitesmoke;
+    text-align:center;
+    padding:5px;
+    width:56px;
+    height:53px;
+    display:inline-block;
+}
+.main-view .menuitem .label
+{
+    font-size:2.5em;
+    line-height:100%;
+}
+.main-view .menuitem .subscript
+{
+    font-size:0.8em;
+}
+
+.main-view .body .task-group 
+{
+    display:inline-block;
+    padding: 20px 20px 10px 10px;
+}
+.main-view .body .task-group .name
+{
+    font-size: 1.8em;
+    font-weight:100;
+    color:black
+}
+.main-view .body .task-group .list-view
+{
+    padding-top: 10px;
+}
+
+.main-view .task-form {
+    margin: 10px;
+}
+.main-view .task-form .form,
+.main-view .task-form #attachment {
+    width: 70%;
+}
+
+#question_page .main-view .heading .name i,
+#answer_page .main-view .heading .name i {
+    color: #CCC;
+    font-size: 0.7em;
+}
+#question_page .main-view .heading .name i.fa-quote-left,
+#answer_page .main-view .heading .name i.fa-quote-left {
+    padding-right: 10px;
+}
+#question_page .main-view .heading .name i.fa-quote-right,
+#answer_page .main-view .heading .name i.fa-quote-right {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.transition-form-container {
+    position:relative;
+}
+
+.transition-form-container .button-wrapper {
+    float:right; 
+    font-size:large;
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.transition-form-container .button-wrapper button.hidden {
+    display: none;
+} 
+#transition textarea,
+.main-view .body .upload-form textarea {
+    font-size: 0.9em;
+}
+
+tbody tr td.reference img {
+    float: left;
+    margin-right: 10px;
+}
+
+tbody tr td.reference span {
+    vertical-align: top;
+    position: relative;
+    top: 5px;
+}
+tbody tr td.tag span {
+    display:inline-block;
+}
+tbody tr td.order div {
+    padding-bottom: 10px;
+}
+
+.subform select.locale {
+    width:330px;
+}
+
+.refund-suggestion-note {
+    color: gray;
+    padding: 0px 10px 10px;
+    font-size: 1em;
+    font-style: italic;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .transition-form-container .button-wrapper {
+        float: none;
+        position: relative;
+        top: -10px;
+        left: 5px;
+    }    
+    .transition-form-container .button-wrapper button.decision {
+        width: 48%;
+    }    
+    .subform select.locale {
+        width:220px;
+    }       
+    .main-view .task-form .form,
+    .main-view .task-form #attachment {
+        width: 100%;
+    }
+    
+}

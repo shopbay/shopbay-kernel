@@ -1,0 +1,62 @@
+<?php
+return [
+    'campaigns/sale/create'=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'permission'=>Feature::patternize(Feature::$hasSaleCampaignLimitTierN),
+        'shopFilter'=>true,
+        'redirectUrlOnRejection'=>url('campaigns/sale'),
+        'flashId'=>'CampaignSale',
+        'flashMessage'=>Sii::t('sii','You have hit sale campaign limit: {limit}.'),
+    ],  
+    'campaigns/bga/create'=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'permission'=>Feature::patternize(Feature::$hasBGACampaignLimitTierN),
+        'shopFilter'=>true,
+        'redirectUrlOnRejection'=>url('campaigns/bga'),
+        'flashId'=>'CampaignBga',
+        'flashMessage'=>Sii::t('sii','You have hit product campaign limit: {limit}.'),
+    ],  
+    'campaigns/promocode/create'=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'permission'=>Feature::patternize(Feature::$hasPromocodeCampaignLimitTierN),
+        'shopFilter'=>true,
+        'redirectUrlOnRejection'=>url('campaigns/promocode'),
+        'flashId'=>'CampaignPromocode',
+        'flashMessage'=>Sii::t('sii','You have hit promocode campaign limit: {limit}.'),
+    ],
+    'post:shops/settings/marketing?service='.Feature::$hasSocialMediaShareButton=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'shopFilter'=>true,
+        'permission'=>Feature::$hasSocialMediaShareButton,
+        'postModel'=>'MarketingSettingsForm',
+        'postField'=>'socialMediaShare',
+        'redirectUrlOnRejection'=>url('shop/settings/serviceNotAvailableJsonAction?Subscription=serviceNotAvailable&service='.Feature::$hasSocialMediaShareButton.'&returnUrl='.url('shop/settings/marketing')),
+        'flashId'=>'Shop',
+    ],       
+    'post:shops/settings/marketing?service='.Feature::$addShopToFacebookPage=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'shopFilter'=>true,
+        'permission'=>Feature::$addShopToFacebookPage,
+        'postModel'=>'Subscription',
+        'postField'=>'service',
+        'redirectUrlOnRejection'=>url('shop/settings/serviceNotAvailableJsonAction?Subscription=serviceNotAvailable&service='.Feature::$addShopToFacebookPage.'&returnUrl='.url('shop/settings/marketing')),
+        'flashId'=>'Shop',
+    ],       
+    'post:shops/settings/notifications?service='.Feature::$hasEmailTemplateConfigurator=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'shopFilter'=>true,
+        'permission'=>Feature::$hasEmailTemplateConfigurator,
+        'postModel'=>'Subscription',
+        'postField'=>'service',
+        'redirectUrlOnRejection'=>url('shop/settings/serviceNotAvailableJsonAction?Subscription=serviceNotAvailable&service='.Feature::$hasEmailTemplateConfigurator.'&returnUrl='.url('shop/settings/notifications')),
+        'flashId'=>'Shop',
+    ],
+    'shops/settings/seo'=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'shopFilter'=>true,
+        'permission'=>Feature::$hasSEOConfigurator,
+        'redirectUrlOnRejection'=>url('shop/settings'),
+        'flashId'=>'Shop',
+    ],
+];
+

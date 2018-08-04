@@ -1,0 +1,30 @@
+.main-view .body .form .row .label-wrapper label {
+    display: inline-block;
+}
+.main-view .body .list-box .data .element .tags {
+    padding:0;
+}
+.tags {
+    display: inline-block;
+    margin: 0;
+    padding: 0;   
+}
+.tags li {
+    list-style-type: none;
+    background: orange;
+    color: white;
+    padding: 2px 3px;
+    padding-left: 0px;
+    display: inline;
+    margin: 3px;
+    border-radius: 3px;
+}
+.tags li:first-child {
+    padding-left: 3px;
+}
+.tags li:last-child {
+    padding-right: 4px;
+}
+.tags li:nth-child(odd) {
+    background: lightskyblue;
+}

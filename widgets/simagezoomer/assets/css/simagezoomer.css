@@ -1,0 +1,21 @@
+/* Keep the gallery panel on the left */ 
+.elevatezoom .gallery {
+    float: left;
+} 
+.elevatezoom .gallery a {
+    display: inherit;
+} 
+.elevatezoom-image {
+    margin-left: 5px;
+    width: 80%;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .elevatezoom-image {
+        margin-left: 0px;
+    }
+    .elevatezoom .gallery a {
+        display: inline;
+    } 
+}

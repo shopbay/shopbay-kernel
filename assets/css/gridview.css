@@ -1,0 +1,275 @@
+.grid-view-loading
+{
+    background:url(loading.gif) no-repeat;
+}
+
+.grid-view.border
+{
+    border:1px solid #EDEDED;
+
+}
+.grid-view
+{
+    padding: 15px 0px;
+    font-size: 1em;
+}
+
+.grid-view table.items
+{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px #EDEDED solid;
+}
+.grid-view table.items ul {
+    list-style: none;
+}
+
+.grid-view table.items td
+{
+    font-size: 1em;
+    border: 0px #EDEDED solid;
+    padding: 0.3em;
+}
+.grid-view table.items th
+{
+    border: 0px grey solid;
+    text-align: center;
+    height: 30px;
+}
+.grid-view table.items th a
+{
+    font-weight: bold;
+    text-decoration: none;
+}
+.grid-view table.items th a:hover
+{
+    color: red;
+}
+.grid-view table.items th a.asc
+{
+    background:url(up.gif) right center no-repeat;
+    padding-right: 10px;
+}
+.grid-view table.items th a.desc
+{
+    background:url(down.gif) right center no-repeat;
+    padding-right: 10px;
+}
+
+.grid-view table.items tr.odd
+{
+    background: #F9F9F9;
+}
+
+.grid-view table.items tfoot tr
+{
+    background: white;
+    border-collapse: collapse;
+    width: 100%;
+    border: 0px white solid;
+    font-style:normal;
+}
+.grid-view table.items tfoot tr:hover
+{
+    background: white;
+}
+.grid-view table.items tfoot tr td
+{
+    border: 0px white solid;
+}
+.grid-view table.items tfoot tr td .grandtotal
+{
+    color:red;
+    float:right;
+    font-weight: normal;
+    font-size:1.2em;
+}
+.grid-view table.items tfoot tr td .total
+{
+    color:#555;
+    float:right;
+    font-weight: normal;
+    font-size:1.2em;
+}
+.grid-view table.items .footer-button {
+    padding:0px 0px;
+    font-size:1em;
+    color: white;
+}
+.grid-view table.items .footer-button a {
+    text-decoration: none;
+    color:grey;
+    cursor: pointer;
+}
+.grid-view table.items .footer-button a:hover {
+    color:red;
+}
+
+.grid-view table.items a:hover {
+    color: red
+}
+.grid-view table.items a
+{
+    text-decoration: underline;    
+}
+
+.grid-view .link-column img
+{
+    border: 0;
+}
+
+.grid-view .button-column
+{
+    text-align: center;
+    width: auto;
+}
+
+.grid-view .button-column img
+{
+    border: 0;
+}
+
+.grid-view .checkbox-column
+{
+    width: 15px;
+}
+
+.grid-view .summary
+{
+    margin: 0 0 5px 0;
+    text-align: right;
+}
+
+.grid-view .pager
+{
+    margin: 5px 0 0 0;
+    text-align: right;
+}
+
+.grid-view .empty
+{
+    font-style: italic;
+}
+
+.grid-view .filters input, .grid-view .filters select
+{
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.grid-view table.imagelist
+{
+    border-collapse: collapse;
+    width: 100%;
+    border: 0px #EDEDED solid;
+    margin: 0px 0px;
+}
+.grid-view table.imagelist td
+{
+    font-size: 1em;
+    border: 0px #EDEDED solid;
+    padding: 0.3em;
+}
+.grid-view table.imagelist tr.odd
+{
+    background: #F9F9F9;
+}
+.grid-view table.imagelist .key-value-pair
+{
+    font-size: 0.9em;
+    padding: 3px 0px 0px;
+}
+.grid-view table.imagename
+{
+    border-collapse: collapse;
+    width: 100%;
+    border: 0px #EDEDED solid;
+    margin: 0px 0px;
+}
+.grid-view table.imagename td
+{
+    font-size: 1em;
+    border: 0px #EDEDED solid;
+    padding: 0.3em;
+}
+.grid-view table.imagename .info
+{
+    clear:both;
+    font-size:0.8em;
+}
+.grid-view table.imagename .info div
+{
+    padding-top:3px;
+}
+table.paymentform td textarea
+{
+    background: #EDEDED;
+    border-color: #B4B4B4 #FEFEFE #FEFEFE #B4B4B4;
+    font-size: 1.2em;
+}
+
+.grid-view .errorSummary, .errorSummary
+{
+    border: 2px solid #C00;
+    padding: 7px 7px 12px 7px;
+    margin: 0 0 20px 0;
+    background: #FEE;
+    font-size: 0.9em;
+}
+.grid-view .errorMessage, .errorMessage
+{
+    color: red;
+    font-size: 0.9em;
+}
+
+.grid-view .errorSummary p, .errorSummary p
+{
+    margin: 0;
+    padding: 5px;
+}
+
+.grid-view .errorSummary ul, .errorSummary ul
+{
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.table-list
+{
+    width: 100%;
+    border: 1px solid #EDEDED;
+    margin-bottom: 10px;
+}
+.table-list a
+{
+    color: #555;
+    font-weight: bold;
+    text-decoration: none;
+}
+.table-list a:hover
+{
+    color: black;
+}
+
+.grid-view table.items a.zocial {
+    color: white;
+    text-decoration: none;
+}
+.grid-view table.items a.zocial:hover {
+    color: white;
+}
+#oauth_networks table.items .fa {
+    font-size: 1.2em;
+}
+#oauth_networks table.items th {
+  text-align: left;
+  padding-left: 2px;
+}
+
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .grid-view table.items {
+        font-size: 0.9em;
+    }
+}

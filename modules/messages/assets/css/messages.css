@@ -1,0 +1,6 @@
+#message_header {
+    margin-bottom: 0;
+}
+.detail-view.message {
+    border:1px solid whitesmoke;
+}

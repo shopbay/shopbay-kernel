@@ -1,0 +1,73 @@
+{
+    "product": {
+        "name":{
+            "en_sg":"Product",
+            "zh_cn":"产品"
+        },
+        "fields":[
+            {
+                "id":"product_field_1",
+                "name":{
+                    "en_sg":"Product Setting 1",
+                    "zh_cn":"产品设置1"
+                },
+                "remarks":{
+                    "en_sg":"Remarks 1.",
+                    "zh_cn":"备注1."
+                },
+                "type":"checkbox",
+                "value":true
+            },
+            {
+                "id":"product_field_2",
+                "name":{
+                    "en_sg":"Product Setting 2",
+                    "zh_cn":"产品设置2"
+                },
+                "remarks":{
+                    "en_sg":"Remarks 2.",
+                    "zh_cn":"备注2."
+                },
+                "type":"select",
+                "value":"2",
+                "options":[
+                    {
+                        "value":"1",
+                        "label":{
+                            "en_sg":"Option 1",
+                            "zh_cn":"选项1"
+                        }
+                    },
+                    {
+                        "value":"2",
+                        "label":{
+                            "en_sg":"Option 2",
+                            "zh_cn":"选项2"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "layout" : {
+        "name":{
+            "en_sg":"Layout",
+            "zh_cn":"布局"
+        },
+        "fields":[
+            {
+                "id":"layout_field_1",
+                "name":{
+                    "en_sg":"Layout Setting 1",
+                    "zh_cn":"布局设置1"
+                },
+                "remarks":{
+                    "en_sg":"Remarks 1.",
+                    "zh_cn":"备注1."
+                },
+                "type":"checkbox",
+                "value":true
+            }
+        ]
+    }    
+}

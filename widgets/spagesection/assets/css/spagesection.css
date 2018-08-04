@@ -1,0 +1,43 @@
+.sections .section-button-all {
+    float: right;
+    position: relative;
+}
+.sections .section-button-all a {
+    font-size:1em;
+    font-weight:lighter;
+    color:lightgray
+}
+.sections .section-button-all img {
+    vertical-align:middle;
+    padding-right:10px;
+    cursor: pointer;
+}
+.sections .section-button {
+    display:inline-block;
+    width:20px;
+    text-align:center;
+}
+.sections .section-button a {
+    font-size:1em;
+    font-weight:lighter;
+    color:lightgray
+}
+.sections .section-button img {
+    vertical-align:middle;
+    padding-right:10px;
+    cursor: pointer;
+}
+
+.sections .section-body .widget {
+    padding:20px 20px;
+}
+
+.sections .section-body .subform {
+    margin-left:20px;
+}
+.sections .section-body .subform > div:first-child {
+    margin-top: 0px;
+}
+.sections .section-body .subform > div {
+    margin-top: 10px;
+}

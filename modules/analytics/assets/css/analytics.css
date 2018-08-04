@@ -1,0 +1,264 @@
+/*This is a custom chart stylesheet on top of nv.d3.min.css*/
+.chart-container {
+    display:inline-block;
+    vertical-align: top;
+    border-top: 1px solid whitesmoke;
+    padding: 20px 20px;
+    position: relative;
+}
+.chart-container:first-child {
+    padding-top: 0px;
+    border-top: 0px solid whitesmoke;
+}
+.chart-container .chart-container {/*container inside container*/
+    display:inline-block;
+    vertical-align: top;
+    padding: 0;
+    border-top: 0px solid whitesmoke;
+    position: relative;
+    margin-right: 10px;
+}
+.chart-container .chart-container:last-child {
+    margin-right: 0px;
+}
+.chart-name {
+    display:inline-block;
+    font-size: 1.5em;
+}
+.chart-container .chart-container .chart-name {/*container inside container*/
+    font-size: 1.2em;
+    padding: 0px 10px;
+}
+
+.chart-filter {
+    display:inline-block;
+    float: right;
+}
+
+.chart-container .chart-container .chart-filter {/*container inside container*/
+    display: inline-block;
+    float: right;
+    position: relative;
+    margin-right: 15px;
+    top: -5px;    
+}
+.section-body .chart-filter li {
+    font-size: 10px;
+    padding: 5px;
+}
+
+.chart-filter ul {
+    padding: 0px;
+    margin: 0px;
+    font-size: 0;
+}
+.chart-filter li {
+    font-size: 12px;
+    list-style: none;
+    border: 1px solid #EDEDED;    
+    border-right: 0px solid #EDEDED;    
+    display: inline-block;    
+    margin: 0px;
+    padding: 5px 10px;
+}
+.chart-filter li:first-child {
+    border-left: 1px solid #EDEDED;    
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.chart-filter li:last-child {
+    border-right: 1px solid #EDEDED;    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.chart-filter li a {
+     color: #EDEDED;
+}
+.chart-filter li.active a {
+     color: black;
+}
+.chart-filter li a:hover {
+    color: red;
+}
+.chart-canvas {
+    display: inline-block;
+    position: relative;
+}
+.chart-canvas .page-loader{
+    top: -32px;
+    left: 15px;
+}
+.chart-container .chart-canvas .PieChart {
+    position: relative;
+    top: -65px;    
+}
+
+.growth-area  {
+    display: inline-block;
+    margin:20px 0px;
+}
+.growth-area .title {
+    font-size: 1.25em;
+}
+.growth-area .total {
+    font-size: 3em;
+    color: black;
+}
+.growth-area .subscript {
+    font-size: 1em;
+    margin-top: 5px;
+}
+.growth-area .data {
+    display: inline-block;
+}
+.growth-area .arrow {
+    display: inline-block;
+    font-size: 3em;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#svg_TrendChart {
+    width: auto;
+}
+#svg_TrendChart .nv-lineChart circle.nv-point {
+    fill-opacity:1;
+}
+
+.counter-chart {
+    background: inherit;
+    color: inherit;
+}
+.counter-chart .counter {
+    position: relative;
+    font-size: 4em;
+    font-weight: bold;
+    color: black;
+    background: inherit;
+    margin: 30px;
+    top: 0;
+    right: 0;
+}
+.counter-chart .title {
+    font-size: 1.5em;
+}
+.counter-chart .subscript {
+    font-size: 1em;
+    margin-top: 15px;
+}
+.counter-area  {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 3px 5px;
+    padding: 20px 0px;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;    
+}
+.chart-container .counter-area {
+    display:block;
+}
+
+.tabular-chart table  {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    width: 95%;
+    min-height: 128px;
+}
+.tabular-chart table tr th,
+.tabular-chart table tr td {
+    text-align: left;
+    padding-right: 8px;
+}
+.tabular-chart table tbody tr:nth-child(even) { 
+    background: white;
+}
+.tabular-chart table tbody tr:nth-child(odd) {
+    background: #F9F9F9;
+}
+.tabular-chart table tbody td:first-child {
+    background: white;
+}
+.tabular-chart table tbody td.name {
+    width: 80%;
+}
+.tabular-chart table tbody td.sum {
+    width: 25%;
+}
+.tabular-chart table tbody td.sum,
+.tabular-chart table thead th.sum {
+    text-align: center;
+}
+.empty-area {
+    font-size: 1.3em;
+    color: black;
+    font-weight: 600;
+    position: absolute;
+    left: 30%;
+    top: 40%;    
+}
+
+.PageviewChart.chart-container,
+.VisitorsChart.chart-container,
+.ConversionsChart.chart-container {
+    margin-right: 0px
+}
+.PageviewChart.chart-container .chart-filter,
+.VisitorsChart.chart-container .chart-filter,
+.ConversionsChart.chart-container .chart-filter {
+    top: 10px;
+    float: none;
+    left: 10px;
+    display: block;
+}
+.ConversionsChart .chart-canvas {
+    top: 30px;
+}
+.ConversionsChart .chart-canvas .counter-area {
+    display: inline-block;
+    min-width: 25%;
+}
+.ConversionsChart .chart-canvas .counter-area .title {
+    font-size: 1em;
+    padding: 0px 10px;
+}
+.RevenueLeftInCartChart.chart-container {
+    top: 20px;
+}
+  
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .growth-area {
+        padding: 10px;
+        width:43%;
+        vertical-align: top;
+    }
+    .growth-area .total {
+      font-size: 2.2em;
+    }
+    .growth-area .title {
+      font-size: 1.1em;
+    }    
+    .growth-area .arrow {
+      font-size: 1.8em;
+    }    
+    .chart-filter {
+        display: block; 
+        float:none;
+        margin-top: 10px;
+    }
+    .chart-filter li {
+        font-size: 11px;
+    }
+    .chart-container {
+        width: 100%;
+        padding: 1%;        
+    }
+    .chart-container .chart-canvas .chart-container {
+        margin-bottom: 10px;    
+    }
+    .RevenueLeftInCartChart.chart-container {
+      top: 50px;
+    }    
+}

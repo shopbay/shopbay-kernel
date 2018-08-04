@@ -1,0 +1,18 @@
+{
+    "app":{
+        "organization":"Shopbay.org",
+        "name":"Shopbay Kernel"
+    },    
+    "system":{
+        "versionLabel":"<Please input your application version label, e.g. Beta>",
+        "backupDir":"<Please input your application backup directory, e.g. /user/demo/backup>",
+        "gitWorkTree":"<Please input your git working directory, e.g. /INSTALL_PATH>",
+        "gitBranch":"<Please input your git branch name this app is targetting, e.g. develop>",
+        "gitDir":"<Please input your git directory, e.g. /user/demo/repo.git>",
+        "yii1Path":"<Please input your Yii1 framework directory, e.g. /user/demo/yii-1.1.17.467ff50>",
+        "yii2Path":"<Please input your Yii2 framework directory, e.g. /user/demo/yii-2.0.6>",
+        "yiiDebug":true,
+        "yiiTraceLevel":8,
+        "yiiEnv":"dev"
+    }
+}

@@ -1,0 +1,84 @@
+.main-view .body .list-box .data .element .tags {
+    padding:0;
+}
+.main-view .body .list-box .data .element .tags li a,
+.main-view .body .detail-view .data-element .tags li a {
+    color:white;
+    text-decoration: none;
+}
+.tags {
+    display: inline-block;
+    margin: 0;
+    padding: 0;   
+}
+.tags li {
+    list-style-type: none;
+    background: orange;
+    color: white;
+    padding: 2px 3px;
+    padding-left: 0px;
+    display: inline;
+    margin: 3px;
+    border-radius: 3px;
+}
+.tags li:first-child {
+    padding-left: 3px;
+}
+.tags li:last-child {
+    padding-right: 4px;
+}
+.tags li:nth-child(odd) {
+    background: lightskyblue;
+}
+
+.ui-sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.ui-sortable li:last-child {
+    border-bottom: 1px solid #EDEDED;
+}
+.ui-sortable li {
+    cursor: move;
+    border-top: 1px solid #EDEDED;
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    padding: 10px;    
+}
+.ui-sortable li .sort-item i {
+    font-weight: 100;
+    color: lightgray;
+    padding-right: 10px;
+    font-size: 1.2em;
+    vertical-align: top;
+}
+
+.tutorials-selected,
+.tutorials-published {
+    width: 40%;
+    margin-right: 50px;
+}
+.tutorials-selected ul {
+    min-height: 35px;
+    background: #F7F7F7;
+}
+
+#tutorial-series-form .chzn-container .chzn-results,
+#tutorials-form .chzn-container .chzn-results {
+    max-height: 80px;
+}
+
+.seo-section {
+    padding: 10px 20px;
+    margin:40px 0px;
+    background: whitesmoke;
+}
+/**
+ * @todo This is interim solution to set image rendered by HtmlPurifier to always have width 100%
+ * For tutorial content viewing
+ * @see Helper::purify
+ */
+.page-tab img {
+    width:100%;
+}

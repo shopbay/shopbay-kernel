@@ -1,0 +1,369 @@
+p.note {
+    margin-bottom: 20px;
+}
+.disclaimer {
+    position: relative;
+    top:10px;
+    font-size: 0.9em;
+    width: 80%;
+    color: gray;
+    margin: 10px 0px;
+}
+.main-view .disclaimer a {
+    text-decoration: underline;
+}
+.disclaimer .key {
+    font-weight:800;
+    margin-right: 5px;
+}
+.disclaimer .value {
+    font-weight:100;
+}
+.layout-editor  {
+    position: relative;
+}    
+.layout-editor  .form-container {
+    padding: 40px 0px;
+    float: left;
+}    
+.main-view .body .layout-editor  .form-container .ui-button {
+    height:30px;
+    width: 20%;
+}    
+.layout-editor .workspace {
+    background-image: url(/images/grid-15x15.png);
+    display:inline-block;
+}    
+.layout-editor .palette {
+    display:inline-block;
+    vertical-align: top;
+    width:100px;/*sufficient to house two items inside*/
+    margin-left:5px;
+}
+.layout-editor .palette.fixed {
+    position:fixed; 
+    margin-left:9px;
+}
+.layout-editor .palette .group {
+    margin-bottom: 2px;
+    background: #555;
+}
+.layout-editor .palette .group .heading {
+    padding: 4px 0px;
+    margin: 0;
+    font-size: 11px;
+    position: relative;
+    min-height: auto;
+    background: #444;
+    color: white;
+    font-weight: 100;
+    width: 100%;
+    text-align: center;
+}
+.layout-editor .palette .row-draggable,
+.layout-editor .palette .col-draggable {
+    cursor: move;
+    display: inline-block;
+    margin-left: 4px;
+} 
+.layout-editor .palette .widget-label {
+    padding: 10px;
+    background: #555;
+    font-size: 25px;
+    color: white;
+}
+.layout-editor .palette .widget-sgridcolumn {
+    display:none;/* widget column; at palette side make it hidden */
+}
+.layout-editor .modal-dialog {
+    margin-top:80px;
+}
+.layout-editor .modal-dialog .alert {
+    margin-bottom: 5px;
+    border: 0;
+    box-shadow: none;
+}
+.layout-editor .modal-content {
+    border: 0;
+    box-shadow: none;
+}
+.layout-editor .modal-content button {
+    background-image: none;
+}
+.layout-editor .modal-content button.btn-primary {
+    border: 1px solid #1E90FF;
+    background: #1E90FF;
+    box-shadow: none;
+}
+.layout-editor .modal-body form .tab-pane#css .form-group:first-child {
+    padding-top: 6px;/*to get vertical aligned with settings form */
+}
+.workspace .canvas {
+    padding:0;
+    min-height:100px;
+}
+.workspace .canvas .row {
+    position: relative;
+    border-bottom: 0px;
+    margin: 0px 0px 0px;
+    min-height:10px;
+    width:100%;
+}
+.workspace .canvas .column {
+    position: relative;
+    margin:0px;
+    padding: 0;
+    min-height:50px;
+}
+.workspace .canvas .row .widget-header {
+    background: #cccccc;
+}
+.workspace .canvas .column .widget-header {
+    background: #f2f2f2;
+}
+.workspace .canvas .column:nth-child(2n) .widget-header {
+    background: #e6e6e6;
+}
+.workspace .canvas .column .row .widget-header {
+    background: #b3ecff;/*nested row */
+    text-align: left;
+}
+.workspace .canvas .column .row .widget-header button {
+    line-height: 1;
+}
+.workspace .canvas .column .row .column .widget-header {
+    background: #ccf2ff;
+}
+.workspace .canvas .column .row .column:nth-child(2n) .widget-header {
+    background: #e6f9ff;
+}
+.workspace .guid {
+    font-weight: 200;
+    vertical-align: top;
+    font-size: 10px;
+}
+.workspace .widget-header i.fa-lock {
+    padding: 2px 5px;
+    font-size: 11px;    
+    vertical-align: top;
+}
+.workspace .config-menu {
+    position: relative;
+    left: 0;
+    top: -1px;
+    display: inline;        
+}
+.workspace .config-menu i.fa-gear{
+    font-size: 10px;
+    position: relative;
+    text-shadow: none;
+    vertical-align: top;
+    margin-left: 2px;
+    margin-right: -2px;
+}
+.workspace .config-menu button {
+    padding: 0px 2px;
+    border: 0;
+    position: relative;
+    height: 15px;
+    line-height: 5px;
+    font-size: 14px;
+    border-radius: 0;
+    background: none;    
+}
+.workspace .config-menu button.btn-default:hover,
+.workspace .config-menu .btn-default.active, .btn-default:active, 
+.workspace .config-menu.open>.dropdown-toggle.btn-default {
+    background: none;
+}
+.workspace .column .config-menu button {
+    line-height: 0;
+}
+.workspace .config-menu .dropdown-menu {
+    min-width: auto;
+    font-size: 0.85em;    
+    padding: 5px 0px;
+}
+.workspace .config-menu .dropdown-menu > li > a {
+    padding: 0px 10px; 
+}
+.workspace .canvas .column .catalog-container .spinner {
+    text-align: center;
+}
+.workspace .canvas .column .catalog-container .item .thumbnail {
+	font-size: 6em;
+    color: lightgray;
+    background: none;
+}    
+#widget_modal_template form .form-content {
+    margin:15px;
+}
+#widget_modal_template .form-group.static-text {
+    margin-bottom: 0px;
+}
+#widget_modal_template .form-control {
+    height: 25px;
+    padding: 3px 6px;
+}
+#widget_modal_template ul.form-control-static {
+    padding: 8px 0px 0px 15px;    
+}
+#widget_modal_template textarea.form-control {
+    width:100%;
+}
+#widget_modal_template .form-inline-element {
+    display:inline-block;
+}
+#widget_modal_template span.static {
+    margin-left:5px;
+}
+#widget_modal_template select.form-control {
+    width: auto;
+}
+#widget_modal_template textarea.form-control {
+    height: auto;
+}
+#widget_modal_template .form-horizontal .control-label {
+    padding-top:2px;
+}
+#widget_modal_template .static-text .control-label {
+    padding-top:7px;
+}
+#widget_modal_template .image-form-wrapper {
+    width: 83%;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+#widget_modal_template .image-form-wrapper.single {
+    width: 77.4%;
+    margin-left: 20px;
+}
+#widget_modal_template .image-form-wrapper .fileupload-buttonbar {
+    margin: 0;
+}
+#widget_modal_template .btn.fileinput-button {
+	color: #337ab7;
+}
+#widget_modal_template .single-image-container img {
+    display: inline-block;
+    max-width: 690px;
+    width: 100%;
+    margin-right: 10px;
+}
+#widget_modal_template .images-gallery .btn {
+    display:inline-block;
+	line-height: 0;
+    height: 12px;
+    padding-left: 0.1px;
+    padding-bottom: 1px;    
+}
+#widget_modal_template .images-gallery .btn i.fa-times {
+    position: relative;
+    top: -1px;
+    font-size: 11px;
+    padding: 2px;
+}
+#widget_modal_template .images-gallery {
+    padding:0;
+}
+#widget_modal_template .single-image-container .preview,
+#widget_modal_template .images-gallery .preview,
+#widget_modal_template .images-gallery tr.empty .preview {
+    padding:5px;
+    color: lightgray;
+    font-size: 80px;
+}
+#widget_modal_template .images-gallery .preview {
+    font-size: 1em;
+}
+#widget_modal_template .images-gallery .empty .preview {
+    text-align: center;
+}
+#widget_modal_template .images-gallery .preview img {
+    width:100%;
+    height: auto;
+}
+#widget_modal_template .images-gallery .spinner {
+    text-align: center;
+    padding: 30px;
+    color: lightgray;
+    width: auto;
+    font-size: 40px;
+}
+#widget_modal_template .images-gallery td.delete {
+    text-align: center;
+}
+#widget_modal_template .images-gallery td.name .wordwrap {
+    word-wrap: break-word;
+}
+#widget_modal_template .images-gallery .form-group {
+    margin: 0;
+    padding: 10px 0px;
+}
+#widget_modal_template .images-gallery .control-label {
+    color: #555;
+    padding: 8px 10px;
+}
+
+#widget_modal_template .language-tabs li a {
+    padding: 5px 10px;
+    border-radius: 0;
+}
+#widget_modal_template form .language-tab-content  {
+    margin: 10px 0px;
+}
+#widget_modal_template .images-gallery tr.template {
+    display: none;
+}
+
+.workspace .sgridcategoryblock .items.p19-5 > div,
+.workspace .sgridlistblock .items.p19-5 > div {
+    width:18%;
+}
+.workspace .sgridcategoryblock .items.p24-5 > div,
+.workspace .sgridlistblock .items.p24-5 > div {
+    width:22.4%;
+}
+.workspace .sgridcategoryblock .items.p32-83 > div,
+.workspace .sgridlistblock .items.p32-83 > div {
+    width:31.3%;
+}
+.workspace .sgridcategoryblock .items.p49-5 > div,
+.workspace .sgridlistblock .items.p49-5 > div {
+    width:48.1%;
+}
+
+.workspace .row.footer {
+    overflow: visible;
+}
+.workspace .canvas .carousel-inner i.fa-photo {
+    font-size: 5em;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: gray;
+    position: relative;
+    left: 46.5%;
+}
+
+#widget_modal_template .menu-selections ol {
+    padding: 0px 15px;
+}
+#widget_modal_template .menu-selections ol li {
+    margin-bottom: 10px;
+}
+#widget_modal_template .menu-selections select {
+    display: inline-block;
+    margin-left: 20px;
+}
+#widget_modal_template .menu-selections .select-control {
+    margin-left:10px;
+    color:gray;
+    cursor: pointer;
+}
+#widget_modal_template .textarea-wrapper {
+    width: 97%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}

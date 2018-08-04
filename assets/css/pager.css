@@ -1,0 +1,57 @@
+/**
+ * CSS styles for CLinkPager.
+ *
+ * This file is part of Shopbay.org (http://shopbay.org)
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+.spager {
+    margin-top: 20px;
+}
+.spager ul.yiiPager
+{
+    border:0;
+    margin:0;
+    padding:0;
+    line-height:100%;
+    display:inline;
+}
+
+.spager ul.yiiPager li
+{
+    display:inline;
+}
+
+.spager ul.yiiPager a:link,
+.spager ul.yiiPager a:visited
+{
+    padding:0px 5px;
+    text-decoration:none;
+}
+
+.spager ul.yiiPager a:hover
+{
+    color: red;
+}
+
+.spager ul.yiiPager .selected a
+{
+    background:lightgreen;
+    color:#FFFFFF;
+}
+
+.spager.ul.yiiPager .hidden a
+{
+    border:solid 1px #DEDEDE;
+    color:#888888;
+}
+
+/**
+ * Hide first and last buttons by default.
+ */
+.spager ul .first,
+.spager ul .last
+{
+    display:none;
+}
+

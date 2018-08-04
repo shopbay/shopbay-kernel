@@ -1,0 +1,29 @@
+.ssearch {
+    display: inline-block;
+    width:100%;
+    background: white;
+    position: relative;
+} 
+.ssearch ul {
+    margin: 2px 5px;
+    list-style-type: none;
+    padding: 0;
+}
+.ssearch ul li a {
+    font-size: 1.2em;
+}
+.ssearch input {
+    font-size: 1em;
+    width:88%;
+    height:25px;
+    color:black;
+    border: 0;
+}
+.ssearch .search-text,
+.ssearch .search-icon {
+    display:inline;
+}
+.ssearch .search-icon a {
+    display: inline;
+    padding: 0;
+}

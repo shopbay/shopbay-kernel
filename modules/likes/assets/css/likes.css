@@ -1,0 +1,11 @@
+.list-box .counter
+{
+    font-size: 1em;
+    background: white;
+    color: lightgray;    
+    padding: 0px;
+}
+.list-box .fa.big-font {
+    color: lightgray;    
+    font-size: 7.5em;
+}

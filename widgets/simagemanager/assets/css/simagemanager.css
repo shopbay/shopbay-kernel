@@ -1,0 +1,119 @@
+.grid-view.images-gallery .no-items {
+    padding: 10px;
+    border: 1px solid lightgray;
+    width: 100%;
+}
+.grid-view.images-gallery .no-items tr {
+    text-align: center;
+    color: lightgray;
+    font-size: 1.25em;
+    height: 100px;
+}
+
+.fileupload-buttonbar label {
+    font-size:0.9em;
+    font-weight: bold;
+}
+.fileupload-buttonbar label .required {
+    color:red;
+}
+.fileupload-buttonbar .options {
+    display: inline;
+}
+.fileupload-buttonbar .options .btn {
+    float: right;
+    padding: 0px 5px;
+    text-decoration: underline;
+    color: #888;
+    font-size: 0.9em;
+}
+
+tr.template-download:nth-child(even){
+    background: white;
+}
+tr.template-download:nth-child(odd){
+    background: #F9F9F9;
+}
+tr.template-download td.preview img {
+    vertical-align:middle;
+}
+tr.template-download td.name .wordwrap {
+    width:90px;
+    padding-left:10px;
+    font-size:0.9em;
+}
+tr.template-download td.delete button {
+    padding:0px;
+    border:0px;
+    background:red;
+}
+
+.imageurlform-dialog {
+    background: white none repeat scroll 0% 0%;
+    padding: 30px;
+}
+
+#imageurlform_modal .modal {
+    top: 5%;
+}
+
+.imageurlform-dialog input {
+    margin: 20px;
+    width: 80%;
+    border: 1px lightgray solid;
+}
+
+body.merchant .imageurlform-dialog input {
+    height:35px;
+    width:90%;
+}
+
+.imageurlform-dialog .note {
+    padding-top: 5px;
+    color: gray;
+    font-size: 0.9em;
+}
+
+.imageurlform-dialog .ui-button {
+    height: 100%;
+    color: white;
+    background: #1E90FF;
+    border: 1px solid;
+    padding: 8px 15px;
+}
+.imageurlform-dialog #imageUrlCancelButton  {
+    background: darkgray;
+}
+
+.single-image-container {
+    border: 1px solid #D3D3D3;
+    padding: 20px;
+    text-align: center;
+}
+
+.single-image-container img {
+    max-width: 250px;
+    max-height: 300px;
+}
+.single-image-container .template-download button {
+    display: block;
+    margin: 10px auto 0px;
+}
+    
+.file-upload-progress {
+    position: relative;
+}
+
+.file-upload-progress .bar {
+    height: 20px;
+    background: skyblue;
+    position: absolute;
+    top: 40%;
+    text-align: right;
+    color: white;
+}
+.file-upload-progress td .bar {
+    position: relative;
+    text-align: right;    
+    color: white;
+}

@@ -1,0 +1,127 @@
+
+
+Usage Examples:
+==================
+Merge in 1 column
+==================
+View:
+    $this->widget('ext.groupgridview.GroupGridView', array(
+      'id' => 'grid1',
+      'dataProvider' => $dp,
+      'mergeColumns' => array('login_date'),  
+      'columns' => array(
+        'login_date',
+        'company',
+        'name',
+        'age',
+      ),
+    ));Controller:
+     public function actionOneRowspan()
+    {
+        $dp = new CActiveDataProvider('User', array(
+            'sort'=>array(
+                'attributes'=>array(
+                      'login_date',
+                 ),
+                 'defaultOrder' => 'login_date',  
+            ),
+            'pagination' => array(
+              'pagesize' => 30,
+            ),
+        )); 
+        
+        $this->render('onerowspan', array('dp' => $dp));
+    } CSS:
+    /* grid border */
+    .grid-view table.items th, .grid-view table.items td {
+        border: 1px solid gray !important;
+    } 
+
+    /* disable selected for merged cells */     
+    .grid-view td.merge {
+       background: none repeat scroll 0 0 #F8F8F8; 
+    }
+==================
+Merge in 2 columns 
+==================
+View:
+    $this->widget('ext.groupgridview.GroupGridView', array(
+      'id' => 'grid1',
+      'dataProvider' => $dp,
+      'mergeColumns' => array('login_date', 'company'),
+      'columns' => array(
+        'login_date',
+        'company',
+        'name',
+        'age',
+        array('class' => 'CLinkColumn'),
+        array('class' => 'CButtonColumn'),        
+      ),
+    ));Controller:
+    public function actionTwoRowspan()
+    {
+        $dp = new CActiveDataProvider('User', array( 
+               'attributes' => array(
+                  'login_date' => array(
+                    'asc' => 'login_date ASC, company ASC',
+                    'desc' => 'login_date DESC, company ASC',
+                  )
+               ),
+              'defaultOrder' => 'login_date, company',
+            ),
+            'pagination' => array(
+               'pagesize' => 30,
+            ),
+        )); 
+        
+        $this->render('tworowspan', array('dp' => $dp));
+    } CSS:
+    /* grid border */
+    .grid-view table.items th, .grid-view table.items td {
+        border: 1px solid gray !important;
+    } 
+
+    /* disable selected for merged cells */     
+    .grid-view td.merge {
+       background: none repeat scroll 0 0 #F8F8F8; 
+    }
+==================
+Extra Row 
+==================	
+View:
+    $this->widget('ext.groupgridview.GroupGridView', array(
+      'id' => 'grid1',
+      'dataProvider' => $dp,
+      'extraRowColumns' => array('company'),
+      'extraRowPos' => 'above',
+      'columns' => array(
+        'login_date',
+        'name',
+        'age',
+        array('class' => 'CLinkColumn'),
+        array('class' => 'CButtonColumn'),         
+      ),
+    ));Controller:
+    public function actionExtraRow()
+    {
+        $dp = new CActiveDataProvider('User', array(
+            'criteria' => array(
+               'order' => 'company, login_date',
+            ),
+            'sort'=> false,
+            'pagination' => array(
+               'pagesize' => 30,
+            ),
+        )); 
+        
+        $this->render('extrarow', array('dp' => $dp));
+    }  CSS:
+    /* grid border */
+    .grid-view table.items th, .grid-view table.items td {
+        border: 1px solid gray !important;
+    } 
+
+    /* disable selection for extrarows */     
+    .grid-view td.extrarow {
+       background: none repeat scroll 0 0 #F8F8F8; 
+    }

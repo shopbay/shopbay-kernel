@@ -1,0 +1,22 @@
+#child_table tr:nth-child(even){
+    background: white;
+}
+#child_table tr:nth-child(odd){
+    background: #F9F9F9;
+}
+#child_table {
+    width:100%;
+}
+#child_table .page-tab-container input {
+    margin: 2px 10px;
+    width: 93%;
+}
+#child_table tr:nth-child(odd) .page-tab-container .view {
+  background: #F9F9F9;
+}
+
+.del-button a {
+  position: relative;
+  top: 12px;
+}
+

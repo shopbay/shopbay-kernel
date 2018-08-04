@@ -1,0 +1,50 @@
+.markdown{
+padding:0 40px;    
+}
+.markdown h1 {
+color: black;
+font-size: 2.5em;
+border-bottom: 1px solid #ddd;
+}
+.markdown h2 {
+font-size: 2em;
+border-bottom: 1px dashed #ddd;
+}
+.markdown h3 {
+font-size: 1.5em;
+margin-top: 25px;
+}
+.main-view .markdown a, .markdown a {
+color: #4183c4;
+text-decoration: none;
+}
+.markdown pre {
+border: 1px solid #ddd;
+background-color: #f8f8f8;
+border-radius: 3px;
+padding: 6px 10px;
+overflow: auto;
+line-height: 19px;
+font-size: 13px;
+}
+.markdown code {
+margin: 0;
+border: 1px solid #ddd;
+background-color: #f8f8f8;
+border-radius: 3px;
+padding: 0;
+}
+.markdown code:before, .markdown code:after {
+content: "\00a0";
+letter-spacing: -0.2em;
+}
+.markdown blockquote {
+border-left: 4px solid #DDD;
+padding: 0 15px;
+color: #777;
+margin:0;
+}
+
+.markdown img {
+vertical-align: bottom;
+}

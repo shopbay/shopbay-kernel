@@ -1,0 +1,71 @@
+.main-view .body .list-box {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 8px 5px;
+    min-height: 200px;
+}
+
+.media-preview-container {
+    background: whitesmoke;
+    padding: 10px;
+    overflow-x: scroll;
+}
+.media-preview-container span.key {
+    display: block;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+.media-preview-container span.value {
+    color:darkgray;
+}
+.media-preview-container img {
+    width: 100%;
+}
+.list-view .list-box {
+    min-height: 110px;
+}
+.list-box .preview {
+    display: inline-block;
+    text-align: left;
+    color:lightgray;
+    overflow-wrap: break-word;
+    vertical-align: top;
+    min-width: 150px;
+}
+.list-box .preview .fa {
+    font-size: 5em;
+}
+
+.object-thumbnail {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+.object-thumbnail .caption {
+    bottom: 0px;
+    position: absolute;
+    right: -5px;
+}
+.object-thumbnail .caption2 {
+    bottom: 15px;
+    position: absolute;
+    right: -5px;
+    background: orange;
+    color: white;
+    padding: 0px 2px;
+    font-size: 10px;
+    border-radius: 3px;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .main-view .body .list-box {
+        width: auto;
+        display: block;
+        vertical-align: top;
+        margin: 0;
+        min-height: auto;
+    }
+    
+}

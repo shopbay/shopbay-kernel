@@ -1,0 +1,66 @@
+.braintree-hosted-fields-header {
+  padding: 0px 0px 15px;
+}
+.credit-card-icons {
+    float:right;
+}
+
+#card_wrapper {
+    width:60%;
+}
+
+#card_number {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position: right 5px center;
+}
+
+#card_number, 
+#expiration_date,
+#cvv {
+  border: 1px solid lightgray;
+  -webkit-transition: border-color 160ms;
+  transition: border-color 160ms;
+  margin: 10px 0px;
+  width: 95%;
+  height: 25px;
+  padding-left: 5px;
+}
+
+#expiration_date_wrapper {
+    width: 60%;
+    display: inline-block;
+}
+#cvv_wrapper {
+    width: 37%;
+    display: inline-block;
+}
+    
+#card_number.braintree-hosted-fields-focused,
+#expiration_date.braintree-hosted-fields-focused,
+#cvv.braintree-hosted-fields-focused {
+  border-color: #777;
+}
+
+#card_number.braintree-hosted-fields-invalid,
+#expiration_date.braintree-hosted-fields-invalid,
+#cvv.braintree-hosted-fields-invalid {
+  border-color: tomato;
+}
+
+#card_number.braintree-hosted-fields-valid,
+#expiration_date.braintree-hosted-fields-valid,
+#cvv.braintree-hosted-fields-valid {
+  border-color: limegreen;
+}
+
+#card_number.visa,
+#card_number.master-card,
+#card_number.american-express,
+#card_number.unionpay,
+#card_number.jcb,
+#card_number.maestro,
+#card_number.discover {
+  -webkit-background-size: 28px 19px;
+  background-size: 28px 19px;
+}

@@ -1,0 +1,1 @@
+<?php echo $data->getProductImageThumbnail(Image::VERSION_SMEDIUM,array('class'=>'img'));

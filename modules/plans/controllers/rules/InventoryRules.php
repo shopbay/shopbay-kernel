@@ -1,0 +1,19 @@
+<?php
+return [
+    'inventories/management/index'=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'shopFilter'=>true,
+        'permission'=>Feature::$manageInventory,
+        'redirectUrlOnRejection'=>url('inventories/management/serviceNotAvailable'),
+        'flashId'=>'Inventory',
+    ],      
+    'post:shops/settings/notifications?service='.Feature::$receiveLowStockAlert=>[
+        'checkBy'=>'ShopSubscriptionFilter',
+        'shopFilter'=>true,
+        'permission'=>Feature::$receiveLowStockAlert,
+        'postModel'=>'NotificationsSettingsForm',
+        'postField'=>'lowInventory',
+        'redirectUrlOnRejection'=>url('shop/settings/serviceNotAvailableJsonAction?Subscription=serviceNotAvailable&service='.Feature::$receiveLowStockAlert.'&returnUrl='.url('shop/settings/notifications')),
+        'flashId'=>'Shop',
+    ],      
+];

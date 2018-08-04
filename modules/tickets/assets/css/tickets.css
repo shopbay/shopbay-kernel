@@ -1,0 +1,58 @@
+#ticket_view {
+    background: whitesmoke;
+}
+#ticket_view .line-break {
+    padding: 0px;
+    margin: 5px;
+    border: 1px solid whitesmoke;
+    height: 0;
+}
+#ticket_reply .line-break {
+    padding: 0px;
+    margin: 5px -10px 10px;
+    border: .5px solid whitesmoke;
+    height: 0px;
+}
+#ticket_reply .line-break:last-child {
+    padding: 0px;
+    margin: 0;
+    border: 0px solid whitesmoke;
+    height: 0px;
+}
+
+#ticket_view .content-data span.key,
+#ticket_reply .content-data span.key {
+    margin: 0px;
+}
+
+.reply-wrapper {
+    border-top: 1px solid #F5F5F5;
+    margin: 10px -10px;
+    padding: 10px 10px 0px;
+}
+
+.reply-header {
+    width: 100%;
+}
+
+.reply-header .reply-from {
+    font-weight: 600;
+}
+
+.reply-header .reply-date {
+    float: right;
+}
+.reply-form-wrapper {
+    padding: 5px;
+}
+.reply-form-wrapper textarea {
+    height: 100px;
+    padding: 5px;
+}
+.reply-form-wrapper button {
+    margin: 20px;
+    position: relative;
+    vertical-align: top;
+    top: -18px;
+}
+

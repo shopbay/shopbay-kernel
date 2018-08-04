@@ -1,0 +1,389 @@
+.breadcrumbs{
+    display: inline-block;
+    font-size: 0.9em;
+    padding: 10px 30px;
+}
+.breadcrumbs a:link, .breadcrumbs a:visited {
+    color: #555;
+}
+.breadcrumbs .fa.fa-home {
+    font-size: 1.2em;
+}
+.breadcrumbs .fa.fa-angle-right {
+    padding: 0px 0.7em;
+}
+
+.flash {
+    clear: both;
+    padding: 0px 0 5px;
+}
+.main-view {
+    font-size: 1em;
+}
+.main-view.border {
+    border:1px solid #EDEDED;
+}
+.main-view .line-break {
+    margin-top: 10px;
+    border-bottom: 1px dashed #EDEDED;
+}
+.main-view a {
+    color: #888;
+    font-weight: normal;
+    text-decoration: none;
+}
+.main-view .heading {
+    position:relative;
+    font-size: 2.4em;
+    font-weight: normal;
+    min-height: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    width:100%;
+}
+.main-view .heading .tag-wrapper {
+    position: relative;
+    right: 0px;   
+    font-size:1.1em;
+    float:right;
+    display: inline-block;    
+}
+.main-view .heading .tag-wrapper .tag 
+{
+    position: relative;
+    padding: 10px 10px;
+    color: white;
+    background: whitesmoke;    
+}
+.main-view .heading .name-wrapper {
+    float:left;
+    display: inline-block;
+    margin-left: 25px;   
+    max-width:95%;
+    width:95%;
+}
+.main-view .heading .name-wrapper.with-tag {
+    max-width:70%;
+    width:70%;
+}
+.main-view .heading .name {
+    font-size: 1em;
+    display: table;
+}
+.main-view .heading .name .superscript {
+    font-size: 0.4em;
+    margin-left:1px;
+}
+.main-view .heading .name .subscript {
+    font-size: 0.4em;
+    margin-left:5px;
+    display: inline-block;
+}
+.main-view .heading .image {
+    float:left;
+    margin-right:20px;
+}
+
+.main-view .heading .description {
+    padding: 10px 25px;
+    margin: 0;
+    font-size: 0.5em;
+    font-weight: 100;
+    opacity: 0.75;
+    clear: both;
+    width: 80%
+}
+
+.main-view .body {
+    font-size: 1em;
+    padding: 20px;
+}
+.main-view .body .imgContainer {
+    float:left;
+}
+.main-view .body .imgContainer .thumbnails {
+    float:left;
+    display:inline;
+    margin-right: 10px;
+    width: 30px;
+}
+.main-view .body .line-break {
+    margin: 30px 0px;
+}
+
+.main-view .heading .name .substatus {
+    padding:5px 5px 5px 0px;
+    text-transform:uppercase;
+    color:white;
+    font-size:0.4em;  
+    display: inline;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.main-view .body input.disabled {
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    cursor: not-allowed;
+}
+.main-view .body input {
+    background-color: white;
+/*    border: 1px solid #a7a6ac;*/
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+}
+.main-view .body select {
+    background-color: white;
+    border: 1px solid #a7a6ac;
+    height: 24px;
+    line-height: 22px;
+    padding-left: 5px;
+}    
+.main-view .body .ui-button {
+    height: 100%;
+    color: white;
+    background: #1E90FF;
+    border: 1px solid;
+    padding: 8px 15px;
+}
+.main-view .body .ui-button .ui-button-text {
+    padding: 0px;
+}
+
+.main-view .body .button-3  {
+    background: darkgray;
+}
+.main-view .body .button-2  {
+    background: lightcoral;
+}
+.main-view .body .button-1  {
+    background: limegreen;
+}
+.main-view .body .sections {
+    clear:both;
+}
+.main-view .body textarea {
+    width:80%;
+}
+
+.main-view .field {
+    font-weight:bold;
+    margin-bottom: 30px;
+}
+
+.main-view .body .search-form {
+    background: whitesmoke;
+    padding: 10px;
+}
+.main-view .body .search-form label {
+    margin-top: 5px;
+}
+.main-view .body .search-form input, .main-view .body .search-form select, .main-view .body .filters input, .main-view .body .filters select {
+    background-color: #F0F0F0;
+    padding: 1px 1px;
+    border: 1px solid #ccc;
+}
+.main-view .body .filters input, .main-view .body .filters select {
+    width: 99%;
+}
+
+.main-view .body .data-form {
+    margin-right:10px;
+}
+.main-view .body .image-form {
+    margin-top:5px;
+    float:right;
+}
+.main-view .body .form, .main-view .body .upload-form {
+    padding-left: 10px;
+}
+.main-view .body .form .sections {
+    margin-left: -5px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.main-view .body .tabs a {
+    font-weight: normal;
+}
+
+.main-view .body .items i
+{
+    padding-right: 3px;
+}
+.main-view .body .items .image i
+{
+    font-size: 2.6em;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.main-view .body .detail-view {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.flash .detail-view
+{
+    margin-bottom: 20px;
+}
+.main-view .body .detail-view.rounded,
+.flash .detail-view.rounded
+{
+    border: 1px solid whitesmoke;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+.flash .detail-view.solid
+{
+    background: whitesmoke;
+}
+.main-view .body .detail-view .data-column,
+.flash .detail-view .data-column {
+    vertical-align: top;
+    display: inline-block;
+}
+.main-view .body .detail-view .data-element,
+.flash .detail-view .data-element {
+    padding: 5px;
+}
+.main-view .body .detail-view .data-element a,
+.flash .detail-view .data-element a
+{
+    text-decoration: underline;
+}
+.main-view .body .detail-view .data-element input,
+.flash .detail-view .data-element input {
+    height: auto;
+}
+.main-view .body .detail-view .data-element a:hover,
+.flash .detail-view .data-element a:hover {
+    color: red;
+}
+.main-view .body .detail-view .data-element .key,
+.flash .detail-view .data-element .key {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.main-view .key-value-pair .key {
+    padding-right: 8px;
+}
+
+.main-view .body textarea,
+.main-view .body .form textarea {
+    overflow-y:auto;
+}
+
+/* this is for supload imageform */
+.fileupload-button {
+    position:relative;
+}
+.fileupload-button .files {
+    position:absolute;
+    top:0px;
+    right:15px    
+}
+.fileupload-button .fileinput-button {
+    font-size:1.1em;
+    font-weight: bold;
+    position:absolute;
+    top: 120px;
+    right: 35px;
+}
+
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .breadcrumbs {
+        padding: 10px 20px;
+    }
+    .main-view {
+        padding: 0;
+    }
+    .main-view .body {
+        padding: 2%;
+    }
+    .main-view .body input {
+        width:95%;
+    }
+    .main-view .body .data-form {
+        top: 90px;
+    }
+    .main-view .body .image-form {
+        margin-top:5px;
+        width:auto;
+        float:none;
+    }
+
+    .main-view .body .detail-view .data-column.normal {
+        width:100%;
+    }
+    .main-view .heading .tag-wrapper .tag {
+        position: absolute;
+        right: -5px;
+        font-size: 0.45em;
+        padding: 5px 10px;
+        min-width: 50px;
+    }
+    .main-view .heading .name-wrapper.with-tag {
+        max-width:70%;
+        width:70%;
+    }
+    .main-view .heading .name-wrapper .image {
+        float: none;
+        margin: 0;
+    }
+    .main-view .body .data-form .note {
+        clear: both;
+        padding-top: 10px;
+    }
+    .main-view .body textarea {
+        width:90%;
+    }
+    .main-view .body input[type="checkbox"] {
+        width: 5%;
+    }
+    .list-box.float-image .data {
+        width: auto;
+        min-width: 50%;        
+    }
+    .imagelist td {
+        display:inherit;
+    }
+    div.form label {
+        margin-top: 10px;
+        width: 50%;
+    }
+    .column {
+        float: none;
+    }
+    /* this is for supload imageform */
+    .fileupload-button {
+        float: right;
+    }
+    .fileupload-button .files {
+        position: relative;
+        top: 0;
+        right: 0px;   
+    }
+    .fileupload-button .fileinput-button {
+        font-size: 0.9em;
+        position: relative;
+        top: 10px;
+        left: 20px;
+    }  
+    .files .preview * {
+        width: 80px;
+    }
+    .files .preview * {
+        width: 80px;
+    }
+    .files.single-image-container .preview * {
+        width: 100%;
+    }
+    
+}

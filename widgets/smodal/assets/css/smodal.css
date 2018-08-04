@@ -1,0 +1,256 @@
+/*inner modal*/
+.main-view .body .smodal-overlay {
+    z-index: 400;
+}
+.main-view .body .smodal {
+    z-index: 420;
+}
+.smodal-overlay {
+    opacity: 1;
+    background-color: #fff;
+    background-color: rgba(119, 119, 119, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+    display:none;    
+}
+.smodal-container {
+    z-index: 510;
+    display:none;
+    margin: 0 auto;
+}
+.smodal {
+    text-align: center;
+    z-index: 1000;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 50px;
+}
+.smodal-content {
+    overflow: auto;
+}
+.smodal-content:after {
+    content:"\0020";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    overflow:hidden;
+}
+
+.smodal-content {
+    font-size: 1em;
+}
+.smodal-content.border {
+    border:1px solid #EDEDED;
+}
+.smodal-content .line-break {
+    border-bottom: 1px dashed #EDEDED;
+}
+.smodal-content a {
+    font-weight: normal;
+    text-decoration: none;
+}
+.smodal-content a.zocial {
+    color: white;
+}
+.smodal-content .heading {
+    position:relative;
+    font-size: 2.4em;
+    font-weight: normal;
+    color: black;
+    min-height: 50px;
+    display: inline-block;
+    margin: 10px 0px 25px;
+    width:100%;
+}
+.smodal-content .heading .tag-wrapper {
+    position: relative;
+    right: 0px;   
+    font-size:1.1em;
+    float:right;
+    display: inline-block;    
+}
+.smodal-content .heading .tag-wrapper .tag 
+{
+    position: relative;
+    padding: 10px 10px;
+    color: white;
+    background: whitesmoke;    
+}
+.smodal-content .heading .name-wrapper {
+    float:left;
+    display: inline-block;
+    margin-left: 25px;    
+}
+.smodal-content .heading .name {
+    font-size: 1em;
+    display: table;
+}
+.smodal-content .heading .name .superscript {
+    font-size: 0.4em;
+    margin-left:1px;
+}
+.smodal-content .heading .name .subscript {
+    font-size: 0.4em;
+    margin-left:5px;
+    display: inline-block;
+}
+.smodal-content .heading .image {
+    float:left;
+    margin-right:20px;
+}
+
+.smodal-content .body {
+    font-size: 1em;
+    padding: 20px;
+}
+.smodal-content .imgContainer {
+    float:left;
+}
+.smodal-content .imgContainer .thumbnails {
+    float:left;
+    display:inline;
+    margin-right: 10px;
+    width: 30px;
+}
+.smodal-content .body .line-break {
+    margin: 30px 0px;
+}
+
+.smodal-content .heading .name .substatus {
+    padding:5px 5px 5px 0px;
+    text-transform:uppercase;
+    color:white;
+    font-size:0.4em;  
+    display: inline;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.smodal-content input {
+    background-color: white;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+}
+.smodal-content select {
+    background-color: white;
+    border: 1px solid #a7a6ac;
+    height: 24px;
+    line-height: 22px;
+    padding-left: 5px;
+}
+.smodal-content form .ui-button {
+    color: white;
+    background: #1E90FF;
+    border: 1px solid;
+    padding: 8px 15px;
+}
+.smodal-content .ui-button .ui-button-text {
+    padding: 0px;
+}
+
+.smodal-content .secondary-button  {
+    background: lightgray;
+}
+.smodal-content .primary-button  {
+    background: limegreen;
+}
+.smodal-content .sections {
+    clear:both;
+}
+
+.smodal-content .field {
+    font-weight:bold;
+    margin-bottom: 30px;
+}
+
+.smodal-content .form .sections {
+    margin-left: -5px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.smodal-content .tabs {
+    margin-right:10px;
+}
+.smodal-content .tabs a {
+    font-weight: normal;
+}
+
+.smodal-content .items i
+{
+    padding-right: 3px;
+}
+
+.smodal-content .detail-view {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.smodal-content .flash .detail-view {
+    margin-bottom: 20px;
+}
+.smodal-content .detail-view.rounded,
+.smodal-content .flash .detail-view.rounded
+{
+    border: 1px solid whitesmoke;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+.smodal-content .detail-view.solid,
+.smodal-content .flash .detail-view.solid
+{
+    background: whitesmoke;
+}
+.smodal-content .detail-view .data-column,
+.smodal-content .flash .detail-view .data-column {
+    vertical-align: top;
+    display: inline-block;
+}
+.smodal-content .detail-view .data-element,
+.smodal-content .flash .detail-view .data-element {
+    padding: 5px;
+}
+.smodal-content .detail-view .data-element a,
+.smodal-content .flash .detail-view .data-element a
+{
+    text-decoration: underline;
+}
+.smodal-content .detail-view .data-element input,
+.smodal-content .flash .detail-view .data-element input {
+    height: auto;
+}
+.smodal-content .detail-view .data-element a:hover,
+.smodal-content .flash .detail-view .data-element a:hover {
+    color: red;
+}
+.smodal-content .detail-view .data-element .key,
+.smodal-content .flash .detail-view .data-element .key {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.main-view .key-value-pair .key
+.smodal-content .key-value-pair .key
+{
+    color: gray;
+    padding-right: 8px;
+}
+
+.smodal-content .list-box.float-image .data {
+    width:80%;
+}
+
+@media screen and (max-width : 375px){
+    .smodal {
+        left: 3%;
+        right: 3%;
+    }
+}

@@ -1,0 +1,12 @@
+.list-view .summary
+{
+    margin: 0 0 5px 0;
+    text-align: right;
+}
+
+.list-view .empty
+{
+    padding: 10px;
+}
+
+

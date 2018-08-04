@@ -1,0 +1,93 @@
+.flash-advice,
+.wizard-advices
+{
+    background:#e7f5fe;
+    color:#87cefa;
+    border: 0px #87cefa solid;
+    position: relative;
+    padding:10px 20px;
+}
+.wizard-advices ul,
+.flash-advice ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.wizard-advices a,
+.flash-advice a 
+{
+    color:#87cefa;
+    top:5px;
+    right:10px;
+}
+.wizard-advices li a,
+.flash-advice li a {
+    color:#E3A6A8;
+}
+.wizard-advices .advice.checked,
+.flash-advice .advice.checked {
+    color: #6ca4c8;
+}
+.wizard-advices .advice-link,
+.flash-advice .advice .advice-link {
+    padding-left: 5px;
+}
+.wizard-advices .advice i,
+.flash-advice .advice i {
+    margin-right: 7px;
+}
+.wizard-advices .advice.checked i,
+.flash-advice .advice.checked i {
+    margin-right: 5px;
+}
+.wizard-advices .title {
+    font-size: 1.5em;
+    padding: 10px 0px;
+}
+.wizard-advices .title .fa {
+    margin-right: 8px;
+}
+.wizard-advices .checklist li {
+    padding: 10px 0px;
+}
+/* -------------- */
+/* theme default  */
+/* -------------- */
+.flash-advice.default,
+.wizard-advices.default
+{
+    background:#e7f5fe;
+    color:#87cefa;
+    border: 0px #87cefa solid;
+}
+.flash .flash-advice.default:nth-child(even){
+    background: whitesmoke;
+    color: gray;
+}  
+.flash-advice.default a 
+{
+    color:#87cefa;
+}
+.wizard-advices.default li a,
+.flash-advice.default li a {
+    color:#E3A6A8;
+}
+.wizard-advices.default .advice.checked,
+.flash-advice.default .advice.checked {
+    color: #6ca4c8;
+}
+/* -------------- */
+/* theme notice   */
+/* -------------- */
+.flash-advice.notice,
+.wizard-advices.notice
+{
+    background:#FFF6BF;
+    color:#CD950C;
+    border: 0px #FFD324 solid;
+}
+.flash-advice.notice a 
+{
+    color:#FABD05;
+}

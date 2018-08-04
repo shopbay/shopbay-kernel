@@ -1,0 +1,23 @@
+# netbeans project files
+nbproject
+
+# Mac DS_Store Files
+.DS_Store
+config.json.bak
+
+#auto or offline generated files
+/assets/**/*.min.css
+/assets/**/*.min.js
+/widgets/**/*.min.css
+/widgets/**/*.min.js
+/modules/**/*.min.css
+/modules/**/*.min.js
+/modules/help/docs/_process.md
+/modules/help/assets/css/help_process.css
+
+# ------------------------------------------
+# Exception : mainly used for empty folder
+# ------------------------------------------
+!.gitignore
+!/modules/analytics/widgets/**/*.min.css
+!/modules/analytics/widgets/**/*.min.js

@@ -1,0 +1,113 @@
+.flash-icon 
+{
+    font-size:0.8em;
+    position: relative;
+    top: -2px;
+}
+.flash-icon.success
+{
+    color: #C6D880;
+    padding-right: 3px;
+}
+.flash-icon.notice
+{
+    padding-right: 3px; 
+    color: #FFD324;
+}
+.flash-icon.error
+{
+    color: #FBC2C4;
+    padding-right: 3px;
+}
+.flash-error, .flash-notice, .flash-success, .flash-advice
+{
+    padding:10px 20px;
+}
+.flash-error
+{
+    background:#FBE3E4;
+    color:#8a1f11;
+    border: 0px #FBC2C4 solid;
+    position: relative;
+}
+.flash-notice
+{
+    background:#FFF6BF;
+    color:#CD950C;
+    border: 0px #FFD324 solid;
+    position: relative;
+}
+.flash-success
+{
+    background:#E6EFC2;
+    color:#264409;
+    border: 0px #C6D880 solid;
+    position: relative;
+}
+.flash-advice {
+    background: #FFF6BF;
+    color: #264409;
+    border: 0 #FFF6BF solid;
+    position: relative;
+}
+
+.flash-success ul,div.flash-notice ul, div.flash-error ul, div.flash-advice ul 
+{
+    margin: 0px 0px;
+}
+.flash-error a 
+{
+    color:#FBC2C4;
+    top:5px;
+    right:10px;
+}
+.flash-error li a {
+    color:#E3A6A8;
+}
+.flash-notice a 
+{
+    color:#FFD324;
+    top:5px;
+    right:10px;
+    
+}
+.flash-notice li a 
+{
+    color:#FABD05;
+}
+.flash-success a 
+{
+    color:#C6D880;
+    top:5px;
+    right:10px;
+}
+.flash-success li a {
+    color:#8CA628;
+}
+.flash-advice a 
+{
+    color:#FABD05;
+    top:5px;
+    right:10px;
+}
+.flash-title 
+{
+    font-size:1.4em;
+    padding-bottom:5px;
+}
+.flash ul li {
+    padding: 1px 5px;
+    font-size:1.05em;
+}
+.flash li {
+    padding: 1px 28px;
+    font-size:1.05em;
+}
+.flash i.fa {
+    font-size: 1.4em;
+    vertical-align: middle;
+}
+
+.flash .close-button {
+    text-decoration: none;
+}

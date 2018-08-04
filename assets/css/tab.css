@@ -1,0 +1,71 @@
+.sTab ul.tabs
+{
+    margin: 0;
+    padding: 0;
+    font: lighter 16px Verdana, sans-serif;
+    border-bottom: 1px solid #EDEDED;
+    height:41px;
+}
+
+.sTab ul.tabs li
+{
+    list-style: none;
+    display: inline;
+}
+
+.sTab ul.tabs a
+{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 10px 5px 0px;
+    margin: 0 0 0 5px;
+    border: 1px solid #EDEDED;
+    border-bottom: none;
+    background: whitesmoke;
+    text-decoration: none;
+}
+
+.sTab ul.tabs a:link, .sTab ul.tabs a:visited
+{
+    color: lightgray;
+}
+
+.sTab ul.tabs a:hover
+{
+    /*color: whitesmoke;*/
+    /*background: #E6F2FF;
+    border-color: #227;*/
+}
+
+.sTab ul.tabs a.active
+{
+    background: white;
+    border-top: 1px solid #EDEDED;
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid white;
+    /*font: normal 15px Verdana, sans-serif;*/
+    font-weight: lighter;
+    color : #111;
+}
+
+.sTab div.view
+{
+    padding: 8px;
+    margin: 0;
+}
+
+#order ul.tabs a.active
+{
+    background: lightskyblue;
+    border-bottom: 1px solid lightskyblue;
+    color : white;
+}
+#item ul.tabs a.active
+{
+    background: lightgreen;
+    border-bottom: 1px solid lightgreen;
+    color : white;
+}

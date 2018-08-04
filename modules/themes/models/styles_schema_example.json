@@ -1,0 +1,53 @@
+{
+    "common":{
+        "css": [
+            "sample-theme1.css",
+            "sample-theme2.css",
+            "sample-theme3.css"
+        ],
+        "images":[]
+    },
+    "default":{
+        "name":{
+            "en_sg":"Default Style",
+            "zh_cn":"默认风格"
+        },
+        "css":[],
+        "images": [
+            {"desktop":"sample-theme-default-desktop.jpg"},
+            {"tablet":"sample-theme-default-tablet.jpg"},
+            {"mobile":"sample-theme-default-mobile.jpg"}
+        ]
+    },
+    "style_1":{
+        "name":{
+            "en_sg":"Style 1",
+            "zh_cn":"风格一"
+        },
+        "css":[
+            "sample-theme-style1-customized.css"
+        ],
+        "images": [
+            {"desktop":"sample-theme-style1-desktop.jpg"},
+            {"tablet":"sample-theme-style1-tablet.jpg"},
+            {"mobile":"sample-theme-style1-mobile.jpg"}
+        ]
+    },
+    "style_2":{
+        "name":{
+            "en_sg":"Style 2",
+            "zh_cn":"风格二"
+        },
+        "css":[
+            "sample-theme-style2-customized.css",
+            "sample-theme-style2-customized_2.css",
+            "sample-theme-style2-customized_3.css"
+        ],
+        "images": [
+            {"desktop":"sample-theme-style2-desktop.jpg"},
+            {"tablet":"sample-theme-style2-tablet.jpg"},
+            {"mobile":"sample-theme-style2-mobile.jpg"}
+        ]
+    }
+}
+

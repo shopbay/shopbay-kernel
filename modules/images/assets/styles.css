@@ -1,0 +1,34 @@
+#imgInstaller {
+	margin:20px 0;
+	padding:20px;
+	text-align:center;
+	border:1px solid lightGray;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0.14, rgb(255,255,255)),
+		color-stop(0.5, rgb(250,250,250))
+	);
+	background-image: -moz-linear-gradient(
+		center top,
+		rgb(255,255,255) 14%,
+		rgb(250,250,250) 50%
+	);
+}
+
+.notice {
+	color:#606060;
+	font-style:italic;
+}
+
+.warning {
+	color:#ff0000;
+	font-weight:bold;
+}
+
+.last {
+	margin-bottom:0;
+}

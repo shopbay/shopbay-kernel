@@ -1,0 +1,43 @@
+.main-view .body .comment,
+.modal-content .comment {
+    font: 14px/20px italic Times, serif;
+    padding: 5px;
+    background-color: whitesmoke;
+    margin: 8px 0px;
+    padding: 8px 10px;
+    text-indent: 0px;
+}
+.main-view .body blockquote {
+    border: 0;
+}
+.main-view .body blockquote div {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.review {
+    padding: 8px 10px;
+    display: inline-block;
+}
+.main-view .list-box .data.content {
+    width: 80%;
+}
+.fa.small-font {
+    font-size: 1.2em;
+    color:lightgray;
+    margin-right:3px;
+}
+.fa.big-font {
+    font-size: 2em;
+    color: lightgray;    
+}
+.list-box .fa.big-font {
+    font-size: 7.5em;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .main-view .list-box .data.content {
+        width: 63%;
+    }
+}

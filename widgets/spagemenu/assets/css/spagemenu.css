@@ -1,0 +1,106 @@
+.page-menu {
+    display: inline-block;
+    float: right;
+}
+.pagemenu {
+    list-style-type: none;
+    margin: 5px 0px;
+}
+.pagemenu li {
+    float: right; 
+    margin: 0px 5px;
+}
+.pagemenu li a {
+    font: bold 15px Arial;
+    color: #DCDCDC;
+    display: block;
+    margin-left: 5px;
+    line-height: 15px;
+    text-decoration: none;
+    background:inherit;
+}
+.pagemenu li a.active {
+    background:whitesmoke;
+    color: inherit;
+    border-radius: 5px;
+}
+.pagemenu li a.primary-button {
+    background:#1E90FF;
+}
+
+.pagemenu li a.workflow-button {
+    background: #1E90FF;
+}
+.pagemenu li a.activate {
+    background:limegreen;
+    color: white;
+}
+.pagemenu li a.deactivate {
+    background:lightgray;
+    color: white;
+}
+.pagemenu li a.primary-button:hover, 
+.pagemenu li a.workflow-button:hover, 
+.pagemenu li a.activate:hover, 
+.pagemenu li a.deactivate:hover{
+    color : black;
+}
+.pagemenu li a:visited {
+    text-decoration: none;
+}
+.pagemenu li a:hover {
+    text-decoration: none;
+    color : inherit;
+    background:whitesmoke;
+    border-radius: 5px;
+}
+.pagemenu li.active a {
+    color: #555;
+    text-decoration: none;
+}
+.pagemenu .menuitem {
+    text-align:center;
+    padding:5px;
+    width:56px;
+}
+.pagemenu .menuitem .label{
+    font-size:2.5em;
+    font-weight: 600;
+    line-height:100%;
+}
+.pagemenu .menuitem .subscript{
+    font-size:0.8em;
+    font-weight:100;
+}
+
+.pagemenu .menuitem .letter-icon{
+    padding: 0px 8px 0px;
+    border-radius: 20%;
+    color: inherit;
+}
+
+.pagemenu .menuitem .label i.material-icons {
+    line-height: 0;
+    position: relative;
+    top: 7px;
+    font-size: 40px;
+}    
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .pagemenu {
+        display: inline;
+        padding: 5px;     
+        float:none;
+    }
+    .pagemenu .menuitem {
+        width: 53px;
+    }
+    .pagemenu li {
+        padding: 5px;        
+    }
+    .pagemenu li a {
+        font: bold 13px Arial;
+        margin-left:0px;
+    }
+}

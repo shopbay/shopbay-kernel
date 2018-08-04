@@ -1,0 +1,134 @@
+.spagefilter-mobile {
+    display: none;   
+}
+.spagefilter {
+    font-size: 14px;   
+}
+.spagefilter .page-menu {
+    display:block;
+    position: relative;
+    right: 10px;
+    top: 5px;
+    min-height:120px;
+    float:none;
+}
+.spagefilter h1 {
+    padding: 0 20px;
+    font-size: 1.8em;
+    font-weight: 300;
+    text-align: right;
+}
+.spagefilter .form .row {
+    margin: 0px 5px;
+}
+.spagefilter .form .row label {
+    font-weight: normal;
+    font-size: .9em;
+    display: block;
+    /* background: whitesmoke;*/
+    height: 15px;
+    width: 91%;
+    padding: 2px;
+}
+.spagefilter .form .row img {
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    margin-left:3px;
+}
+.spagefilter .form .row input,
+.spagefilter .form .row select {
+    height: 18px;
+    font-size: 13px;
+    padding: 2px 5px;
+    font-weight: 100;
+    max-width: 250px;
+}
+.spagefilter .form .row textarea {
+    border: 1px solid lightgray;
+}
+.spagefilter .form .row textarea,
+.spagefilter .form .row input {
+    width:90%;
+}
+.spagefilter .form .row textarea.filled,
+.spagefilter .form .row input.filled {
+    background: bisque;
+    border: 1px solid lightgray;
+}
+
+.spagefilter .form input.numeric-field,
+.spagefilter .form input.date-field {
+    margin-left:3px;
+    width:82px;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .spagefilter-mobile {
+        display: block;   
+        padding: 10px 0px;
+        font-size: 0.9em; 
+        background: whitesmoke;
+        position: relative;
+    }
+    .spagefilter-mobile h1 {
+        cursor:pointer;
+        font-weight: 100;
+        font-size: 15px;        
+        margin-left: 10px;
+        float: left;
+    }
+    .spagefilter-mobile .heading {
+        font-size:0.7em;
+        min-height:45px;
+    }
+    .spagefilter-mobile .form {
+        display:none;
+        position: relative;
+        margin: 10px;
+        background: #ededed;        
+    }
+    .spagefilter-mobile .form label {
+        display: inline-block;
+        width: auto;
+        margin-right: 5px;
+        min-width: 80px;
+    }    
+    .spagefilter-mobile .form textarea,
+    .spagefilter-mobile .form input {
+        width: 50%;
+        display: inline-block;
+        margin: 0;
+    }
+    .spagefilter-mobile .form .row {
+        margin:0px;
+    }
+    .spagefilter-mobile .form .row textarea.filled,
+    .spagefilter-mobile .form .row input.filled {
+        background: bisque;
+        border: 1px solid lightgray;
+    }
+    .spagefilter-mobile .form input.numeric-field,
+    .spagefilter-mobile .form input.date-field {
+        margin-left: 5px;
+        width: 20%;
+    }    
+    .spagefilter-mobile .form .row img {
+        position: relative;
+        top: 3px;
+        cursor: pointer;
+        margin-left:5px;
+    }
+    .spagefilter-mobile .pagemenu .menuitem {
+        width: 45px;
+    }
+    .spagefilter-mobile .pagemenu li {
+        padding: 0;
+        margin:0;
+    }
+    .spagefilter-mobile .pagemenu li a {
+        font-size: 1.3em;
+        color: #999;
+    }
+}

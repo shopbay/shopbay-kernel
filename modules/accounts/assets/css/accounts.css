@@ -1,0 +1,122 @@
+.sidebar-menu li span {
+    width: 200px;
+}
+#login_page,
+#signup_page,
+#password_reset_page {
+    margin:40px;
+}
+#login_page .form-container,
+#signup_page .form-container,
+#password_reset_page .form-container{
+    padding: 40px 40px 0px;
+}
+#login_page .form-container #flash-bar,
+#signup_page .form-container #flash-bar {
+   margin: 0;
+}
+#login_page .form-row.tos,
+#signup_page .form-row.tos{
+    text-align: center;
+    font-size: 0.9em;    
+    padding:20px;
+}
+#login_page .form-container form input.ui-button,
+#signup_page .form-container form input.ui-button,
+#password_reset_page .form-container form input.ui-button {
+    height: 35px;
+    width: 93.5%;
+}
+#password_reset_page .form-container form input.ui-button {
+    margin-bottom: 40px;
+}
+#signup_page {
+    background: white;
+}
+
+.form-link a {
+    text-decoration: none;
+    color: deepskyblue;
+    font-weight: 200;
+}
+
+#all {
+    display:block;
+}
+.main-view .body .data-form {
+    width: 70%;
+}
+
+.main-view .tasks .list-view {
+    display:inline-block;
+}
+.main-view .orders .summary a {
+    color: #555;
+}
+.main-view .question-group {
+    display:inline-block;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+.main-view .body .question-group .name {
+    font-size: 1.8em;
+    font-weight:100;
+    color:black;
+    margin-bottom: 10px;
+}
+
+#activity .list-box > div {
+    display:inline-block;
+    vertical-align:top;
+}
+#activity .list-box .image {
+    font-size:1.5em;
+}
+
+#activity .list-box .heading-element {
+    font-size:1.1em;
+    margin-bottom:5px;
+}
+#activity .list-box .element {
+    font-size:0.9em;
+}
+#activity .list-box img {
+    width:25px;
+    height:25px;
+    margin-right:3px;
+}
+#profile_page .main-view {
+  margin-top: 50px;    
+}
+
+.welcome-block {
+    display:inline-block;
+    vertical-align: top;
+    border: 0px solid whitesmoke;
+    padding:0px 20px;
+}
+
+#password_reset_ack_page {
+    margin: 50px 0px;
+}
+#password_reset_ack_page .main-view .body {
+    padding-left: 30px;
+}
+.recent-wrapper {
+    padding:0 20px;
+}
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    
+    #login_page, 
+    #signup_page,
+    #password_reset_page {
+        margin: 60px 0px;
+    }
+    #login_page .form-container,
+    #signup_page .form-container,
+    #password_reset_page .form-container{
+        padding: 20px;
+    }
+    
+}

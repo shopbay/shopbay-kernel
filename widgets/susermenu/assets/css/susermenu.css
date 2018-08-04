@@ -1,0 +1,136 @@
+.mobile-button {
+    display: none;
+}
+.susermenu.section.top {
+    margin-bottom:20px;
+}    
+.susermenu.section.bottom {
+    margin-top:20px;
+}    
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .mobile-button {
+        display: inline;
+    }
+    .mobile-button {
+        display: inline;
+        float: right;
+        cursor: pointer;
+        font-size: 2em;
+    }
+    .mobile-button a {
+        cursor:pointer;
+    }
+    .mobile-shop {
+        padding: 3px 5px;        
+        background: #19c589;
+    }    
+    .mobile-login {
+        padding: 2px;
+        background: #111;
+    }    
+    .mobile-login .avatar img{
+        border: 1px solid gray;
+    }    
+    .mobile-cart {
+        padding: 3px 5px;
+        background: orange;
+        position: relative;
+    }    
+    .mobile-cart .counter {
+        position: absolute;
+        padding: 0px 3px;
+        font-size: 0.4em;
+        right: 3px;
+        border-radius: 8px;        
+    }
+    .mobile-wcm,
+    .mobile-admin,
+    .mobile-community {
+        padding: 0px 5px;
+        position: absolute;
+        background: #19c589;
+        right: 0px;    
+    }
+    .mobile-shopmgmt {
+        padding: 5px;
+        position: fixed;
+        background: orangered;
+        right: 20px;
+        width: 40px;
+        bottom: 100px;
+        border-radius: 50%;        
+    }
+    .mobile-shopmgmt i.material-icons {
+        font-size: 40px;        
+    }
+    .mobile-shopmgmt i.avatar img {
+        width: 24px;
+        vertical-align: top;
+        margin-left: -2px;
+        border: 1px solid lightgray;        
+    }
+    body.merchant .header-container .mobile-shopmgmt a {
+        color: white;
+    }
+    .header-container .susermenu.nav-menu {
+        width: 0;
+    }
+    .susermenu .offcanvas-menu{
+        margin: 0;
+        padding: 0;
+    }
+    .susermenu .offcanvas-menu a {
+        font-size: 20px;
+        padding: 5px 10px;
+        color: white;
+        font-weight: 100;
+    }
+    .susermenu .offcanvas-menu li {
+        margin: 5px 0px;
+    }        
+    .susermenu .offcanvas-menu a i.fa,
+    .susermenu .offcanvas-menu a i.material-icons {
+        margin-right: 10px;
+    }
+    .susermenu .offcanvas-menu .message.counter {
+        position: relative;
+        top: -2px;
+        right: 0;
+        margin-left: 10px;
+        padding: 1px 5px;
+    }    
+    .susermenu .offcanvas-menu li ul {
+        background: #111;
+        list-style: none;
+    }    
+    .susermenu .offcanvas-menu li ul li ul {
+        padding-left: 20px;
+    }    
+
+    .susermenu .offcanvas-menu li.language-menu a i.fa-globe,
+    .susermenu .offcanvas-menu li.language a i.fa-globe {
+        margin-right: 3px;
+    }
+    .susermenu .offcanvas-menu li.language-menu a form,
+    .susermenu .offcanvas-menu li.language a form {
+        display: initial;
+    }
+
+    .susermenu li.shop-mgmt ul {
+        margin: 0;
+        padding: 0;
+    }
+    .susermenu li.shop-mgmt ul li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;    
+    }
+    .susermenu li.shop-mgmt ul li.active a {
+        background: lightgreen;    
+    }
+    .offcanvasmenu .shop-name {
+        padding: 10px 10px 0;
+    }
+}

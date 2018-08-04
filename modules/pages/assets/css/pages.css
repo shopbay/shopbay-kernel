@@ -1,0 +1,44 @@
+div.form .page-label label {
+    display: inline;
+}
+div.form .page-label .note {
+    color: gray;
+    margin-top: 0;
+}
+
+div.form .page-label textarea {
+    border: 1px solid lightgray;
+    width: 54%;
+}
+div.form .page-tab textarea {
+    border: 1px solid lightgray;
+    width: 60%;
+}
+.seo-section {
+    padding: 10px 20px;
+    background: whitesmoke;
+}
+#seo_section {
+    background: whitesmoke;
+}
+
+#page_layout_page #flash-bar {
+    padding: 0 0 5px;
+}
+#page_layout_page .pagemenu li a .label {
+    color:#DCDCDC;
+    padding:0;
+}
+#page_layout_page .pagemenu li a.active .label,
+#page_layout_page .pagemenu li a:hover .label {
+    color: #222;
+    padding-right: 30px;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    div.form .page-label textarea,
+    div.form .page-tab textarea {
+        width: 96%;
+    }
+}

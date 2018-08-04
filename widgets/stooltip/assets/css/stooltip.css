@@ -1,0 +1,129 @@
+div.tooltips {
+  position: relative;
+  display: inline;
+  padding: 5px;
+}
+div.tooltips div {
+  position: absolute;
+  width:140px;
+  color: #FFFFFF;
+  background: #000000;
+  visibility: hidden;
+  border-radius: 6px;
+  text-align: center;
+  padding:10px;
+}
+div.tooltips .tooltip_width100 {
+  width:100px;
+  top: -5px;
+}
+div.tooltips .tooltip_width200 {
+  width:200px;
+  top: -5px;
+}
+div.tooltips .tooltip_width300 {
+  width:300px;
+  top: -5px;
+}
+
+div.tooltips div:after {
+  content: '';
+  position: absolute;
+}
+div:hover.tooltips div {
+  visibility: visible;
+  opacity: 0.8;
+  z-index: 999;
+}
+div.tooltips.left div:after {
+  top: 40%;
+  left: 100%;
+  margin-top: -2px;
+  width: 0; height: 0;
+  border-left: 5px solid #000000;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+div:hover.tooltips.left div {
+  right: 100%;
+  margin-right: 15px;
+}
+div.tooltips.left .tooltip_width300:after {
+  top:40%;
+}
+div.tooltips.left .tooltip_width200:after {
+  top:30%;
+}
+div.tooltips.left .tooltip_width100:after {
+  top:23%;
+}
+div.tooltips.right div:after {
+  top: 40%;
+  right: 100%;
+  margin-top: -2px;
+  width: 0; height: 0;
+  border-right: 5px solid #000000;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+div:hover.tooltips.right div {
+  left: 100%;
+  margin-left: 15px;
+}
+div.tooltips.right .tooltip_width300:after {
+  top:40%;
+}
+div.tooltips.right .tooltip_width200:after {
+  top:30%;
+}
+div.tooltips.right .tooltip_width100:after {
+  top:23%;
+}
+
+div.tooltips.top div:after {
+  top: 100%;
+  left:24%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 5px solid #000000;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+div:hover.tooltips.top div {
+  left: 100%;
+  margin-left: -83px;
+  top: -70px;  
+}
+div.tooltips.top .tooltip_width300:after {
+  left:24%;
+}
+div.tooltips.top .tooltip_width200:after {
+  left:33.5%;
+}
+div.tooltips.top .tooltip_width100:after {
+  left:67%;
+}
+
+div.tooltips.bottom div:after {
+  bottom: 100%;
+  left: 24%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 5px solid #000000;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+div:hover.tooltips.bottom div {
+  top: 30px;
+  left: 100%;
+  margin-left: -88px;
+}
+div.tooltips.bottom .tooltip_width300:after {
+  left:24%;
+}
+div.tooltips.bottom .tooltip_width200:after {
+  left:33.5%;
+}
+div.tooltips.bottom .tooltip_width100:after {
+  left:67%;
+}

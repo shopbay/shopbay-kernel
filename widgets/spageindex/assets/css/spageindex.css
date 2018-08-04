@@ -1,0 +1,250 @@
+.main-view .heading .view-name {
+    float: left;
+    display:inline-block;
+    margin-left: 25px;    
+}
+.main-view .heading .view-options {
+    float:right;
+    font-size: 0.45em;
+    margin-top: 12px;
+    margin-right: 30px;
+}
+.main-view .heading .view-options ul {
+    padding: 0px;
+    margin: 0px;
+}
+.main-view .heading .view-options ul li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.main-view .heading .view-control {
+    font-size: 0.45em;
+    display: inline-block;
+    padding-left: 35px;
+    padding-top: 10px;
+    float: left;
+}
+.main-view .heading .view-control.tab {
+    clear: both;
+    margin-top: 10px;
+    padding-left: 0px;
+    width: 96%;
+}
+
+.main-view .heading .view-control ul {
+    padding: 0px;
+    margin: 0px;
+}
+.main-view .heading .view-control ul li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 2px;
+}
+.main-view .heading .view-control ul li a {
+    text-transform: capitalize;
+    color: lightgray;
+}
+.main-view .heading .view-control ul li a:hover {
+    color: red;
+}
+.main-view .heading .view-control ul li.active a {
+    color:black;
+}
+
+.main-view .heading .view-control-linebreak {
+    margin: 0px 20px;
+    padding: 16px;
+    border-bottom: 1px #EDEDED solid;  
+    clear: both;
+}
+
+.main-view .heading .arrow-wrapper {
+    position: absolute;
+    top: 70px;
+}
+.main-view .heading ul.zh_cn .arrow-wrapper {
+    top: 78px;
+}
+.main-view .heading .arrow-wrapper.hidden {
+    display:none;
+}
+.main-view .heading .arrow-wrapper.show {
+    display:block;
+}
+
+.main-view .heading .arrow-wrapper .arrow {
+    content: "";
+    position: absolute;
+    top: -9px;
+    bottom: auto;
+    border-width: 0 9px 9px;
+    border-style: solid;
+    border-color: #EDEDED transparent;
+    display: block;
+    width: 0;
+}
+.main-view .heading .arrow-wrapper .arrow-shadow {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 1px;
+    bottom: auto;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
+}
+
+.main-view .heading ul.tabs
+{
+    margin-left: 20px;
+    padding: 0;
+    font: lighter 16px Verdana, sans-serif;
+    border-bottom: 1px solid #EDEDED;
+    height:41px;
+}
+
+.main-view .heading ul.tabs li
+{
+    list-style: none;
+    display: inline;
+}
+
+.main-view .heading ul.tabs a
+{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 10px 5px 0px;
+    margin: 0 0 0 5px;
+    border: 1px solid #EDEDED;
+    border-bottom: none;
+    background: whitesmoke;
+    text-decoration: none;
+}
+
+.main-view .heading ul.tabs a:link, .main-view .heading ul.tabs a:visited
+{
+    color: lightgray;
+}
+
+.main-view .heading ul.tabs a:hover
+{
+    color: black;
+    /*background: #E6F2FF;
+    border-color: #227;*/
+}
+
+.main-view .heading ul.tabs a.active
+{
+    background: white;
+    border-top: 1px solid #EDEDED;
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid white;
+    /*font: normal 15px Verdana, sans-serif;*/
+    font-weight: lighter;
+    color : #111;
+}
+
+.main-view .body .grid-view {
+    padding-bottom: 10px;
+}
+.main-view .body .list-box {
+    border: 1px solid #EDEDED;
+    margin-bottom: 10px;
+    position: relative;
+    min-height: 100px;
+}
+.main-view .body .list-box.float-image {
+    min-height: 120px;
+}
+.main-view .body .list-box.float-image .data {
+    /*width:80%;*/
+}
+.main-view .body .list-box .status {
+    position:absolute;
+    top:5px;
+    right:0px;
+    font-size: 1.3em;
+}
+.main-view .body .list-box .action {
+    position:absolute;
+    top:30px;
+    right:0px;
+    font-size: 1.25em;
+    margin-right: 3px;
+}
+.main-view .body .list-box .image {
+    display:inline-block;
+    vertical-align:top;
+    margin-right:10px;
+    float:left;
+}
+.main-view .body .list-box .data {
+    display:inline-block;
+    padding: 5px;
+}
+.main-view .body .list-box .data .heading-element {
+    padding: 5px 5px 5px 3px;
+    font-size: 1.2em;
+}
+.main-view .body .list-box .data .element {
+    padding:3px;
+    font-size: 0.9em;
+}
+.main-view .body .list-box .data .element strong:first-child {
+    padding-left: 0px;
+}
+.main-view .body .list-box .data .element strong {
+    padding-right: 5px;
+    padding-left: 10px;
+}
+.main-view .body .list-box .data .element ul {
+    list-style: none;
+    padding: 5px 10px 0px;
+}
+.main-view .body .list-box .data .element ul li {
+    padding-bottom: 3px;
+}
+
+.main-view .body .list-box a {
+    font-weight: normal;
+    text-decoration: none;
+}
+.main-view .body .list-box a:hover{
+    color: red;
+}
+.main-view .body .view-options {
+    margin:0;
+    padding:0;
+    display:inline-block;
+    vertical-align: middle;
+    font-size:1.05em;
+}
+.main-view .body .view-options li {
+    display:inline-block;
+    padding-right:5px;    
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .main-view .heading .view-control-linebreak,
+    .main-view .heading .arrow-wrapper {
+        display: none;
+    }
+    .main-view .heading .arrow-wrapper .arrow,
+    .main-view .heading .arrow-wrapper .arrow-shadow {
+        border: 0;
+    }
+    
+    .main-view .heading .view-control {
+        padding-left: 15px;
+        padding-top: 20px;
+        clear:both;
+    }
+}

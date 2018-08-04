@@ -1,0 +1,8 @@
+/* set a border on the images to prevent shifting */ 
+.elevatezoom .gallery img {
+    border:2px solid whitesmoke;
+} 
+/* Change the colour */ 
+.elevatezoom .gallery .active img {
+    border:2px solid red !important;
+} 

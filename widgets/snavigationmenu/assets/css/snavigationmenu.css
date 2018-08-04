@@ -1,0 +1,381 @@
+.nav-menu{
+    margin: 5px;
+    font-size: 1.1em;
+    z-index: 200;   
+}
+/*Strip the ul of padding and list styling*/
+.nav-menu ul {
+    list-style-type:none;
+    position: absolute;
+    right: 0;
+    margin: 0 10px;     
+}
+/*Create a horizontal list with spacing*/
+.nav-menu li {
+    float: left;
+    position: relative;
+}
+/*Style for menu icon */
+.nav-menu li a i {
+    font-size: 1.25em;
+}
+.nav-menu li a .welcome {
+   padding-right: 5px;
+}
+.nav-menu li a .welcome img {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;   
+}
+.nav-menu li a .welcome .counter {
+    line-height: 12px;
+    top: 5px;
+    right: 5px;
+}
+.nav-menu li a i.avatar {
+    margin-right: 5px;
+}
+
+.nav-menu .quickaccess {
+    background: lightskyblue;
+    margin: -5px -10px -5px 10px;
+    line-height: 2.15;    
+}
+.nav-menu .quickaccess a {
+    color: white;
+}
+.nav-menu .language {
+    background: orange;
+}
+.nav-menu .message {
+    background: darkcyan;
+    position: relative;
+}
+.nav-menu .message .message.counter {
+    background: red;
+    position: absolute;
+}
+.nav-menu .home {
+    background: #19c589;
+}
+.nav-menu .home li a .counter {
+    top: 35%;
+    left: 27%;
+    text-align: left;
+    line-height: 12px;
+    max-width: 18px;
+    padding-right: 1px;
+}
+.nav-menu .home li a i.fa {
+    padding-left: 8px;
+}
+.nav-menu .home li a i.material-icons {
+    position: relative;
+    top: 5px;
+    padding-left: 8px;
+}
+
+.nav-menu li .breakline {
+    border-top: 1px solid #CCC;
+    height: 0px;
+}
+
+/*Style for menu links*/
+.nav-menu li a {
+    display:block;
+    padding: 0px 10px;
+    text-align: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: inherit;
+    text-decoration: none;
+}
+/*Hover state for top level links*/
+.nav-menu li:hover a {
+    color: black;
+}
+/*Style for dropdown links*/
+.nav-menu li:hover ul a {
+    background: white;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    border-left: 1px solid #EDEDED;    
+}
+/*Hover state for dropdown links*/
+.nav-menu li:hover ul a:hover {
+    background: white;
+    color: red;
+}
+.gradient-backdrop .nav-menu li:hover ul a {
+    background: whitesmoke;
+}
+.gradient-backdrop .nav-menu li:hover ul a:hover {
+    background: whitesmoke;
+    color: red;
+}
+/*Hide dropdown links until they are needed*/
+.nav-menu li ul {
+    display: none;
+    margin-right: 0;
+}
+
+/*Make dropdown links vertical*/
+.nav-menu li ul li {
+    display: block;
+    float: none;
+}
+
+/*Prevent text wrapping*/
+.nav-menu li ul li a {
+    width: auto;
+    min-width: 160px;
+}
+
+/*Display the dropdown on hover*/
+.nav-menu ul li a:hover + ul,
+.nav-menu li ul:hover {
+    display: block;
+}
+/*Hide the dropdown on second layer menu */
+.nav-menu ul ul li a:hover + ul {
+    display: none;
+}
+
+/*Style 'm-pikabu-nav-toggle-icon' label button and hide it by default*/
+.nav-menu .m-pikabu-nav-toggle-icon {
+    text-decoration: none;
+    color: #fff;
+    background: #19c589;
+    text-align: center;
+    padding: 5px 0;
+    display: none;
+    width: 35px;
+    float: right;
+    font-size: 1.5em;   
+    cursor: pointer;
+}
+.m-pikabu-sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #222;
+    color: white;
+}
+.m-pikabu-sidebar a {
+    text-decoration: none;
+}
+.m-pikabu-sidebar nav ul {
+   padding:0;
+}
+.m-pikabu-sidebar nav li {
+    width: 100%;
+    list-style: none;
+    /*border-bottom: 1px dashed #fcfdf4;*/
+}
+.m-pikabu-sidebar nav li a {
+    color: #e7e7e7;
+    font-size: 1.5em;
+    font-weight: 600;
+    display: block;
+    padding: 13px 0;
+    margin: 0 10px;
+}
+.m-pikabu-sidebar nav li ul li a {
+    font-size: 1.2em;
+}
+.m-pikabu-sidebar nav li a:hover {
+    color: orange;
+}
+.m-pikabu-sidebar nav li:last-child {
+    border-bottom: none;
+}
+/*submenu*/
+.m-pikabu-sidebar nav li ul li ul {
+    display:none;
+    background: black;
+    padding-left: 25px;
+    font-size: 0.85em;
+}
+
+.mobile-display-only{
+    display:none;
+}
+.nav-menuitems .language-menu ul {
+    padding-top: 5px;        
+}
+/*submenu auto width */
+.nav-menuitems .language-menu ul li a,
+.nav-menuitems .quickaccess.language  ul li a {
+    min-width: 80px;
+}
+/*Responsive Styles*/
+@media screen and (max-width : 640px){
+    .nav-menu {
+        margin: 0;
+        min-width:0;
+    }
+    .nav-menu .quickaccess,
+    .nav-menu .quickaccess a {
+        background: inherit;
+        color: inherit;
+    }
+    .nav-menuitems .breakline {
+        border-top: 1px solid;
+        margin-top: 8px;        
+    }
+    .nav-menuitems a i {
+        margin-top: 3px;
+        padding-right: 10px;
+    }
+    .nav-menuitems .cart-menu .counter {
+        position: relative;
+        top: -2px;
+        left: 10px;        
+    }
+    .nav-menuitems .language-menu ul{
+        padding: 0px 20px;
+        background: black;
+    }    
+    /*default display none for submenu below*/
+    .nav-menuitems .quickaccess.home .profile-menu ul,
+    .nav-menuitems .quickaccess.home .account-menu ul {
+        display: none;
+    }
+    .nav-menuitems .language-menu a i,
+    .nav-menuitems .guest-signup a i,
+    .nav-menuitems .quickaccess.home li a i,
+    .nav-menuitems .quickaccess.language a i,
+    .nav-menuitems .quickaccess.cart a i,
+    .nav-menuitems .quickaccess.message a i,
+    .nav-menuitems .quickaccess.home .avatar {
+        float: left;
+        padding-right: 10px;
+        margin-top: 0px;
+    }
+    .nav-menuitems .quickaccess.home li a i.material-icons {
+        margin-left: -3px;
+        font-size: 22px;
+        padding-right: 6px;
+    }
+    .nav-menuitems .quickaccess.home li a .tooltips i.material-icons {
+        font-size: 16px;
+        margin-left: 0;
+        padding-right: 0;
+    }    
+    .nav-menuitems .quickaccess.message {
+        position: relative;
+    }
+    .nav-menuitems .quickaccess.cart .counter,
+    .nav-menuitems .quickaccess.message .counter {
+        position: relative;
+        left: 10px;
+        top: 0;
+        padding: 0px 5px;
+    }
+    .nav-menuitems .quickaccess.cart .counter{
+        left: 3px;
+        top: -2px;
+    }
+    .nav-menuitems .quickaccess.home {
+        position: absolute;
+        top: 0;
+        padding: 5px 0px;
+        width: auto;
+    }
+    .nav-menuitems .quickaccess.home a .welcome {
+        width: auto;
+        font-size: 0.8em;
+    }
+    .nav-menuitems .quickaccess.cart a {
+        float: right;
+        background: lightskyblue;
+        color: white;
+        padding: 5px 8px;
+        border-radius: 8px;
+        font-size: 1.1em;
+    }
+    .nav-menuitems .quickaccess.cart a:hover {
+        background: orange;
+    }
+
+    .nav-menuitems .quickaccess.message {
+        position: absolute;
+        top: 50px;    
+        font-size: 0.8em;
+    }
+    .nav-menuitems .quickaccess.home ul {
+        position: absolute;
+        top: 95px;
+        width: 300px;
+    }
+    /*language submenu for authenticated merchant user */
+    .nav-menuitems .quickaccess.language {
+        position: absolute;
+        top: 425px;    
+        font-size: 0.8em;
+    }
+    /*language submenu for authenticated customer user */
+    .nav-menuitems.customer .quickaccess.language {
+        position: absolute;
+        top: 385px;
+        font-size: 0.8em;
+    }
+    .nav-menuitems .quickaccess.language ul {
+        padding-left: 25px;
+        background: black;
+        position: absolute;
+        width: 100%;
+        font-size: 0.95em;
+    }
+    /*home submenu*/
+    .nav-menuitems .quickaccess.home ul li ul {
+        display:block;
+        position: relative;
+        top: 0;
+        width:350px;
+    }
+    .nav-menuitems .quickaccess.home ul li ul li {
+        width: 75%;
+    }
+    .nav-menuitems .quickaccess.home ul li ul li a i {
+        padding-right: 0;
+    }
+    .nav-menuitems .quickaccess.home ul li ul li a .letter-icon {
+        padding-right: 7px;
+    }
+    .nav-menuitems .quickaccess.home ul li ul .tooltip-content {
+        display:none;
+    }
+
+    /*Make dropdown links appear inline*/
+    .nav-menu ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    .nav-menu li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    .nav-menu ul li, .nav-menu li a {
+        width: 100%;
+        text-align: center;
+    }
+    /*Display 'm-pikabu-nav-toggle-icon' link*/
+    .nav-menu .m-pikabu-nav-toggle-icon {
+        display:block;
+    } 
+    .mobile-display-only {
+        display: inline-block;
+    }
+    
+    .nav-menuitems .mobile-display-only {
+        display: inline;
+    }
+    
+    .fa.fa-bars {
+        font-size: 1.25em;
+    }
+}

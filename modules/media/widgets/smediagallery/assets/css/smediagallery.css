@@ -1,0 +1,60 @@
+.media-gallery-dialog {
+    background:white;
+}
+.media-gallery-dialog .list-view {
+    text-align:left;
+    padding:20px;
+    background: whitesmoke;
+}
+.media-gallery-dialog .list-view .summary {
+    color: gray;
+    font-size: 0.9em;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+}
+.media-gallery-dialog .list-view .spager {
+    display: inline-block;
+}
+.media-gallery-dialog .list-view .pager ul {
+    list-style-type: none;
+}
+.media-gallery-dialog .list-view .pager li {
+    display: inline-block;
+}
+.media-gallery-dialog .list-box {
+    display:inline-block;
+    text-align: center;
+    padding: 20px;    
+    background: white;
+    margin: 5px;
+    cursor: pointer;
+}
+.media-gallery-dialog .list-box.selected {
+    background: deepskyblue;
+}
+.media-gallery-dialog .list-box .data {
+    padding-top: 10px;
+    font-weight: 100;
+}    
+.media-gallery-dialog .row.header {
+    padding: 10px;
+    position:relative;
+}
+.media-gallery-dialog .row.button {
+    padding: 20px;
+}
+.media-gallery-dialog .ui-button {
+    height: 100%;
+    color: white;
+    background: #1E90FF;
+    border: 1px solid;
+    padding: 8px 15px;
+}
+.media-gallery-dialog #mediaGalleryCancelButton {
+    background: darkgray;
+}
+
+@media screen and (max-width : 375px){
+
+}
