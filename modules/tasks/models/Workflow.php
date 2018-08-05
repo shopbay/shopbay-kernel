@@ -40,30 +40,30 @@ class Workflow extends CActiveRecord
      */
     public function rules()
     {
-        return array(
-            array('obj_type, start_process, action, end_process', 'required'),
-            array('obj_type', 'length', 'max'=>30),
-            array('start_process, action', 'length', 'max'=>20),
-            array('end_process', 'length', 'max'=>200),
-            array('decision', 'length', 'max'=>30),
+        return [
+            ['obj_type, start_process, action, end_process', 'required'],
+            ['obj_type', 'length', 'max'=>30],
+            ['start_process, action', 'length', 'max'=>20],
+            ['end_process', 'length', 'max'=>200],
+            ['decision', 'length', 'max'=>30],
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, obj_type, start_process, action, decision, end_process', 'safe', 'on'=>'search'),
-        );
+            ['id, obj_type, start_process, action, decision, end_process', 'safe', 'on'=>'search'],
+        ];
     }
     /**
      * @return array customized attribute labels (name=>label)
      */
     public function attributeLabels()
     {
-        return array(
+        return [
             'id' => Sii::t('sii','ID'),
             'obj_type' => Sii::t('sii','Object Type'),
             'start_process' => Sii::t('sii','Start Process'),
             'action' => Sii::t('sii','Action'),
             'decision' => Sii::t('sii','Decision'),
             'end_process' => Sii::t('sii','End Process'),
-        );
+        ];
     }
     /**
      * Retrieves a list of models based on the current search/filter conditions.
@@ -80,9 +80,9 @@ class Workflow extends CActiveRecord
         $criteria->compare('decision',$this->decision,true);
         $criteria->compare('end_process',$this->end_process,true);
 
-        return new CActiveDataProvider($this, array(
+        return new CActiveDataProvider($this, [
             'criteria'=>$criteria,
-        ));
+        ]);
     }
     /**
      * Get start process
@@ -124,8 +124,10 @@ class Workflow extends CActiveRecord
             if (is_array($endProcess)){//end process object exists
                 if (isset($endProcess[$decision]))
                     return $endProcess[$decision];
-                else
-                    return array_shift(array_values($endProcess));//always return first end_process
+                else {
+                    $values = array_values($endProcess);
+                    return array_shift($values);//always return first end_process
+                }
             }
             else
                 return $endProcess;        
