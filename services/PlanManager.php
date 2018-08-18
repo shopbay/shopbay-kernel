@@ -263,16 +263,16 @@ class PlanManager extends ServiceManager
      * @see SubscriptionWorkflow::activateYes()
      * @see {@link SubscriptionWentActiveHandler}
      * 
-     * @param integer $user Session user id
+     * @param integer $subscriber Subscriber user id; Default to session user id
      * @param \app\modules\v1\models\Plan $plan CModel model to subscribe
      * @return CModel $model
      * @throws CException
      */
-    public function subscribe($user,$plan)
+    public function subscribe($subscriber,$plan, $params=[])
     {
         //If shop is present means changing current plan, null means new subscription
         if (isset($plan->shop)){
-            $currentSubscription = Subscription::model()->mine($user)->locateShop($plan->shop)->active()->notExpired()->find();
+            $currentSubscription = Subscription::model()->mine($subscriber)->locateShop($plan->shop)->active()->notExpired()->find();
             if ($currentSubscription==null)//try to check if is to renewal
                 $currentSubscription = Subscription::findLatestExpiredSubscription($plan->shop);
             if ($currentSubscription==null)//error when expired subscripton is not even found!
@@ -282,7 +282,7 @@ class PlanManager extends ServiceManager
         if (!$plan->subscribable())
             $plan->addError('status', Sii::t('sii','Subscription not allowed.'));
 
-        if ($plan->id==Plan::FREE_TRIAL && Subscription::model()->hasTrialBefore($user))
+        if ($plan->id==Plan::FREE_TRIAL && Subscription::model()->hasTrialBefore($subscriber))
             $plan->addError('status', Sii::t('sii','You have already subscribed to free trial before.'));
         
         if ($plan->hasErrors())
@@ -292,7 +292,11 @@ class PlanManager extends ServiceManager
             $plan->package->addError('status', Sii::t('sii','Subscription not allowed.'));
             $this->throwValidationErrors($plan->package->errors);
         }        
-                
+
+        //[0] Prepare control params
+        $actionBy = isset($params['actionBy']) ? $params['actionBy'] :  $subscriber;//default to $subscriber
+        $createShop = isset($params['createShop']) ? $params['createShop'] :  true;//default to true
+        
         //[1]Prepare new subscription form data
         $form = new SubscriptionForm();
         $form->shop_id = $plan->shop;//got value means changing existing plan, null means new subscription
@@ -305,18 +309,19 @@ class PlanManager extends ServiceManager
         else
             $form->setScenario(SubscriptionForm::SCENARIO_FREE);
                            
-        $subscriptionNo = $user.'_'.$plan->id;//initial subscription no, to be updated later when Braintree assign no.
+        $subscriptionNo = $subscriber.'_'.$plan->id;//initial subscription no, to be updated later when Braintree assign no.
         //[2]Save subscription (as SUBSCRIPTION_PENDING status)
-        $subscription = Subscription::create($user, $subscriptionNo, $plan);
+        $subscription = Subscription::create($subscriber, $subscriptionNo, $plan);
         
         //[3]Pay subscription (payment and webhook notification will be handled inside this call)
-        $returnSubscriptionData = $this->billingManager->paySubscription($user,$form);
+        $returnSubscriptionData = $this->billingManager->paySubscription($subscriber,$form);
         
         //[4] Update subscriptoin data according to payment gateway data
         $this->execute($subscription, [
             'updateSubscriptionData'=>$returnSubscriptionData,
             'recordActivity'=>[
                 'event'=>Activity::EVENT_SUBSCRIBE,
+                'account'=>$actionBy,
                 'description'=>$plan->name,
             ],
         ],$plan->getScenario());
@@ -328,25 +333,21 @@ class PlanManager extends ServiceManager
         //[6] Changing plan: can existing plan after new subscription is added
         if (isset($currentSubscription)){
             if (!$currentSubscription->hasExpired || $currentSubscription->isActive)//for non expired subscription, cancel it (unsubsribe)
-                $this->unsubscribe($user, $currentSubscription, false);//IMPORTANT: cannot delete shop for changing plan
+                $this->unsubscribe($subscriber, $currentSubscription, ['deleteShop'=>false]);//IMPORTANT: cannot delete shop for changing plan
             $shopId = $plan->shop;
         }
         //[7] New plan subscription! Create the shop tied to this subscription
-        else {
-            $newShop = $this->getShopManager()->create($user);
+        elseif ($createShop) {
+            $newShop = $this->getShopManager()->create($subscriber);
             $shopId = $newShop->id;
+            //[8] Binding shop to subscription
+            if ($subscription->bindTo($shopId))
+                //[9] Clone subscription plan to shop level 
+                $subscription->clonePlan();
         }
         
-        //[8] Binding shop to subscription
-        if ($subscription->bindTo($shopId)){
-            //[9] Clone subscription plan to shop level 
-            $subscription->clonePlan();
-            //[10] Everything is ok by far, return subscription object
-            return $subscription;
-        }
-        else {
-            return false;
-        }
+        //[10] Everything is ok by far, return subscription object
+        return $subscription;
     }     
     /**
      * Unsubscribe Plan 
@@ -355,22 +356,26 @@ class PlanManager extends ServiceManager
      * @see SubscriptionWorkflow::deactivateYes()
      * @see {@link SubscriptionCanceledHandler}
      * 
-     * @param integer $user Session user id
+     * @param integer $subscriber Subscriber user id; Default to session user id (login)
      * @param Subscription $model 
+     * @param array $params Additional control parameters
      * @return CModel $model
      * @throws CException
      */
-    public function unsubscribe($user,$model, $deleteShop=true)
+    public function unsubscribe($subscriber,$model, $params=[])
     {
         if (!$model->cancellable()){
             $model->addError('status', Sii::t('sii','Subscription cancellation not allowed.'));
             $this->throwValidationErrors($model->errors);
         }
+        
+        $checkAccess = isset($params['checkAccess']) ? $params['checkAccess'] :  true;//default to true
+        $actionBy = isset($params['actionBy']) ? $params['actionBy'] :  $subscriber;//default to $subscriber
 
         //[1]Move subscription plan to 'PENDING_CANCEL'
         //No activity recording
         //No notfication sending as subscription PENDING_CANCEL is defined by deleted record by "soft delete), findByPk() won't work
-        $model = $this->transition($user, $model, 'cancel',null,false,false);
+        $model = $this->transition($actionBy, $model, 'cancel',null,false,false,$checkAccess);
         
         //[2]Cancel subscription payment (payment and webhook notification will be handled inside this call)
         $this->billingManager->cancelSubscription($model);
@@ -379,12 +384,12 @@ class PlanManager extends ServiceManager
         $ops = [
             'recordActivity'=>[
                 'event'=>Activity::EVENT_CANCEL,
-                'account'=>$user,
+                'account'=>$actionBy,
                 'icon_url'=>$model->getActivityIconUrl(),
                 'description'=>$model->getActivityDescription(),
             ],
         ];
-        if ($deleteShop){
+        if (isset($params['deleteShop']) && $params['deleteShop']){//deleteShop is true
             $ops['deleteShop'] = self::EMPTY_PARAMS;
             //todo should we also unbind shop? cannot, else subscription history will failed
         }

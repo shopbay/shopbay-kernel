@@ -13,6 +13,13 @@ Yii::import("common.services.ServiceManager");
 class MediaManager extends ServiceManager
 {
     /**
+     * Two validation scenario for media storage
+     * Value: either 'apiValidation' or 'skipApiValidation'
+     * 
+     * @var string 
+     */
+    public $validateScenario = 'apiValidation';//Default to validate media storage size via Api
+    /**
      * Initialization
      */
     public function init() 
@@ -59,10 +66,8 @@ class MediaManager extends ServiceManager
 
         $this->validate($user, $media, false);
         
-        $validateScenario = 'apiValidation';//Default to validate media storage size via Api
-        
         if (isset($config['check_storage_limit']) && !$config['check_storage_limit'])
-            $validateScenario = 'skipApiValidation';//skip check if set to false
+            $this->validateScenario = 'skipApiValidation';//skip check if set to false
         
         $media = $this->execute($media, [
             'createRecord'=>array_merge($config,['scenario'=>'skipValidation']),//calling $this->execute already done one round of validation via scenario 'apiValidation'
@@ -70,7 +75,8 @@ class MediaManager extends ServiceManager
                 'event'=>Activity::EVENT_CREATE,
                 'account'=>$user,
             ],
-        ],$validateScenario);
+        ],$this->validateScenario);
+        
         logInfo(__METHOD__.' ok');
         
         if (isset($config['owner']) && $config['owner']!=false){

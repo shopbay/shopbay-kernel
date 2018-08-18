@@ -30,6 +30,10 @@ Yii::import("common.services.workflow.models.Administerable");
 class Plan extends Administerable
 {
     use PlanTypeTrait, MakerCheckerTrait;
+    /*
+     * In-built Plan IDs 
+     * Manual created plans will have IDs start from 1000 (refer to s_plan AUTO_INCREMENT)
+     */
     const FREE_TRIAL        = 1;//this is the system assign package id during installation
     const FREE              = 10;//this is the system assign package id during installation
     const LITE              = 20;//this is the system assign package id during installation
@@ -40,6 +44,7 @@ class Plan extends Administerable
     const ENTERPRISE_MONTHLY= 50;//this is the system assign package id during installation
     const ENTERPRISE_YEARLY = 51;//this is the system assign package id during installation
     const CUSTOM            = 100;//this is the system assign package id during installation
+    const INTERNAL  = 'I';//Internal plan (not expose to external, and used for admin user control)
     const TRIAL     = 'T';//Free Trial
     const FIXED     = 'F';//Fixed, One time charge
     const RECURRING = 'R';//Recurring
@@ -201,11 +206,34 @@ class Plan extends Administerable
         return $dataprovider;
     }
     /**
+     * Plan can only below to one package (the implementation logic now)
+     * @return CActiveDataProvider the data provider that can return package model.
+     */
+    public function getPackageModel()
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('plans',$this->id,true);
+        logTrace(__METHOD__.' criteria',$criteria);
+        //Always return the first found
+        return Package::model()->find($criteria);
+    }     
+    /**
      * @return CActiveDataProvider the data provider that can return plan items models.
      */
     public function searchItems()
     {
         return new CActiveDataProvider('PlanItem',[
+            'criteria'=>['condition'=>'plan_id='.$this->id,'order'=>'create_time DESC'],
+            'pagination'=>['pageSize'=>Config::getSystemSetting('record_per_page')],
+            'sort'=>false,
+        ]);
+    }     
+    /**
+     * @return CActiveDataProvider the data provider that can return plan subscribers.
+     */
+    public function searchSubscribers()
+    {
+        return new CActiveDataProvider('Subscription',[
             'criteria'=>['condition'=>'plan_id='.$this->id,'order'=>'create_time DESC'],
             'pagination'=>['pageSize'=>Config::getSystemSetting('record_per_page')],
             'sort'=>false,
@@ -300,9 +328,7 @@ class Plan extends Administerable
     
     public static function hasFreeTrialInstance()
     {
-//        Yii::beginProfile(__METHOD__);
         $result = static::freeTrialInstance()!=null;
-//        Yii::endProfile(__METHOD__);
         return $result;
     }
     

@@ -17,9 +17,9 @@ trait MakerCheckerTrait
      */
     public function drafted() 
     {
-        $this->getDbCriteria()->mergeWith(array(
+        $this->getDbCriteria()->mergeWith([
             'condition'=>'status = \''.$this->draftedStatus.'\'',
-        ));
+        ]);
         return $this;
     }
     /**
@@ -28,9 +28,9 @@ trait MakerCheckerTrait
      */
     public function submitted() 
     {
-        $this->getDbCriteria()->mergeWith(array(
+        $this->getDbCriteria()->mergeWith([
             'condition'=>'status = \''.$this->submittedStatus.'\'',
-        ));
+        ]);
         return $this;
     }
     /**
@@ -39,9 +39,9 @@ trait MakerCheckerTrait
      */
     public function approved() 
     {
-        $this->getDbCriteria()->mergeWith(array(
+        $this->getDbCriteria()->mergeWith([
             'condition'=>'status = \''.$this->approvedStatus.'\'',
-        ));
+        ]);
         return $this;
     }
     /**

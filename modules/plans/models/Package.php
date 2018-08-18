@@ -29,6 +29,10 @@ Yii::import('common.modules.activities.behaviors.ActivityBehavior');
 class Package extends Administerable
 {
     use PlanTypeTrait, MakerCheckerTrait;
+    /*
+     * In-built Package IDs 
+     * Manual created pacages will have IDs start from 1000 (refer to s_package AUTO_INCREMENT)
+     */
     const FREE_TRIAL = 1;//this is the system assign package id during installation
     const FREE       = 10;//this is the system assign package id during installation
     const LITE       = 20;//this is the system assign package id during installation
@@ -60,7 +64,7 @@ class Package extends Administerable
         elseif ($package==Package::CUSTOM)
             return Sii::t('sii','Custom');
         else
-            return Sii::t('sii','Undefined');
+            return $name;
     }
     /**
      * Model display name 
@@ -216,13 +220,13 @@ class Package extends Administerable
         return new CActiveDataProvider('Plan',['criteria'=>$criteria]);
     }   
     /**
-     * A wrapper method to return published records of this model
+     * A wrapper method to return published records of this model (external type only)
      * Excluding Trial type
      * @return \Package
      */
     public function published() 
     {
-        return $this->approved();
+        return $this->nonInternal()->approved();
     }      
     
     public function getParam($field)

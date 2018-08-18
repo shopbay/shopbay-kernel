@@ -486,11 +486,11 @@ class Subscription extends Administerable
             $duration = $this->plan->duration;
             return date('Y-m-d', strtotime("+$duration days"));//for trial duration 
         }
-        elseif ($this->plan->isOneTimeCharge){
+        elseif ($this->plan->isOneTimeCharge || $this->plan->isInternal){
             if ($this->plan->isFree)
                 return '9999-12-31';//for free plan, end date is forever 
             else
-                return Helper::endDateCycle($this->start_date, 12*50);//for monthly, end date is forever (put 50 years later)
+                return Helper::endDateCycle($this->start_date, 12*1);//for monthly, end date is forever (put 1 years later)
         }            
     }
     /**

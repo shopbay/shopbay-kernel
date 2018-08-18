@@ -51,7 +51,27 @@ trait PlanTypeTrait
     {
         return $this->type==Plan::TRIAL;
     }    
-    
+    /**
+     * Internal plan / package will not be seen by external users (through filer published()
+     * Internal plan / package is used to control admin user behaviors via subscription merchanism
+     * @return boolean
+     */
+    public function getIsInternal()
+    {
+        return $this->type==Plan::INTERNAL;
+    }    
+    /**
+     * A scope wrapper method to return non-internal plans / packages
+     * @return \Plan
+     */
+    public function nonInternal() 
+    {
+        $this->getDbCriteria()->mergeWith([
+            'condition'=>'type != \''.Plan::INTERNAL.'\'',
+        ]);
+        return $this;
+    }
+        
     public function getTypeDesc()
     {
         return static::getTypes()[$this->type];
@@ -64,6 +84,7 @@ trait PlanTypeTrait
             Plan::FIXED => Sii::t('sii','Fixed'), 
             Plan::RECURRING => Sii::t('sii','Recurring'),
             Plan::CONTRACT => Sii::t('sii','Contract'),
+            Plan::INTERNAL => Sii::t('sii','Internal'),
         ];
     }
     
