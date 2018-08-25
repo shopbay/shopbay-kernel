@@ -11,7 +11,7 @@
                 <td width="60%" style="padding-top: 25px;padding-left:20px;">
                     <?php $this->renderPartial('common.modules.notifications.templates.message.account.welcome',[
                             'model'=>$model,
-                            'merchantRole'=>isset($merchantRole)?true:null,
+                            'customerRole'=>isset($customerRole)?true:null,
                         ]);
                     ?>
                 </td>
