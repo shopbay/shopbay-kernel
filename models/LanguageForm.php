@@ -331,7 +331,32 @@ abstract class LanguageForm extends SFormModel
      * Return a particular locale page content
      * @param type $locale
      * @param type $readonly
-     * @param string $attributes Indicate which locale attributes to render; Empty means render all locale attributes
+     * @param string $attributes Indicate which locale attributes to render; 
+     *        Empty means render all locale attributes
+     *        @see childForm::localeAttributes() for $attributes defintion. Example:
+     * <pre>
+     *  return [
+     *      'name'=>[
+     *          'required'=>true,
+     *          'purify'=>true,
+     *          'inputType'=>'textField',
+     *          'inputHtmlOptions'=>['size'=>100,'maxlength'=>static::$nameLength],
+     *      ],
+     *      'content'=>[
+     *          'required'=>true,
+     *          'purify'=>[
+     *              'Attr.EnableID'=>true,
+     *          ],
+     *          'inputType'=>'textArea',
+     *          'inputHtmlOptions'=>['size'=>60,'rows'=>5],
+     *          'ckeditor'=>[
+     *              'imageupload'=>true,
+     *              'js'=>'tutorialckeditor.js',
+     *              'csrfTokenSelector'=>'div.form', // default to '.data-form form'
+     *          ],
+     *      ],
+     *  ];
+     * </pre>
      * @return type
      */
     protected function getLocalePageContent($locale,$readonly=false,$attributes=[])

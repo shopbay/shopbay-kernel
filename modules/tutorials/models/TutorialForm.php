@@ -64,6 +64,7 @@ class TutorialForm extends LanguageForm
                 'ckeditor'=>[
                     'imageupload'=>true,
                     'js'=>'tutorialckeditor.js',
+                    'csrfTokenSelector'=>'div.form'
                 ],
             ],
         ];
